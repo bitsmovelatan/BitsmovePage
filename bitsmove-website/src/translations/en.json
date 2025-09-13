@@ -1,0 +1,203 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "infrastructure": "Infrastructure",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Welcome to Bitsmove",
+    "subtitle": "Comprehensive Web3 Solutions for Services, Products & Infrastructure",
+    "description": "Leading the future of decentralized technology with innovative blockchain solutions, smart contracts, and enterprise-grade infrastructure.",
+    "cta_primary": "Explore Our Services",
+    "cta_secondary": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Web3 and Blockchain Solutions",
+    "smart_contracts": {
+      "title": "Smart Contract Development",
+      "description": "Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise applications. Full lifecycle development from concept to deployment.",
+      "features": ["Security Audits", "Gas Optimization", "Multi-chain Support", "Custom Solutions"]
+    },
+    "defi": {
+      "title": "DeFi Solutions",
+      "description": "Decentralized finance platforms including DEXs, yield farming protocols, liquidity pools, and cross-chain bridges.",
+      "features": ["DEX Development", "Yield Farming", "Liquidity Pools", "Cross-chain Bridges"]
+    },
+    "nft": {
+      "title": "NFT Marketplaces",
+      "description": "Custom NFT platforms, minting solutions, and digital asset marketplaces with advanced trading features.",
+      "features": ["Custom Marketplaces", "Minting Platforms", "Royalty Systems", "Digital Collections"]
+    },
+    "dao": {
+      "title": "DAO Development",
+      "description": "Decentralized autonomous organizations with governance systems, voting mechanisms, and community management tools.",
+      "features": ["Governance Systems", "Voting Mechanisms", "Community Management", "Treasury Management"]
+    },
+    "tokenization": {
+      "title": "Asset Tokenization",
+      "description": "Convert real-world assets into digital tokens with regulatory compliance and fractional ownership capabilities.",
+      "features": ["Real Estate Tokenization", "Art & Collectibles", "Commodities", "Regulatory Compliance"]
+    },
+    "infrastructure": {
+      "title": "Blockchain Infrastructure",
+      "description": "Enterprise-grade blockchain infrastructure, node management, and cloud solutions for Web3 applications.",
+      "features": ["Node Infrastructure", "Cloud Solutions", "API Services", "Monitoring Tools"]
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Innovative Web3 Solutions and Platforms",
+    "wallet": {
+      "title": "Bitsmove Wallet",
+      "description": "Multi-chain digital wallet with advanced security features, DeFi integration, and NFT management.",
+      "features": ["Multi-chain Support", "Hardware Security", "DeFi Integration", "NFT Management"]
+    },
+    "dex": {
+      "title": "Bitsmove DEX",
+      "description": "Decentralized exchange platform with advanced trading features, liquidity mining, and cross-chain capabilities.",
+      "features": ["Advanced Trading", "Liquidity Mining", "Cross-chain Swap", "Low Fees"]
+    },
+    "nft_platform": {
+      "title": "NFT Platform",
+      "description": "Comprehensive NFT marketplace with minting tools, auction systems, and creator monetization features.",
+      "features": ["Easy Minting", "Auction System", "Creator Tools", "Royalty Management"]
+    },
+    "dao_tools": {
+      "title": "DAO Governance Tools",
+      "description": "Complete suite of tools for decentralized governance, voting, and community management.",
+      "features": ["Voting Systems", "Proposal Management", "Community Tools", "Analytics Dashboard"]
+    },
+    "developer_tools": {
+      "title": "Developer Tools",
+      "description": "Comprehensive SDK and APIs for building Web3 applications with ease and efficiency.",
+      "features": ["SDK Libraries", "API Services", "Documentation", "Testing Tools"]
+    }
+  },
+  "infrastructure": {
+    "title": "Infrastructure",
+    "subtitle": "Enterprise-Grade Blockchain Infrastructure",
+    "nodes": {
+      "title": "Blockchain Nodes",
+      "description": "Reliable, high-performance blockchain nodes with 99.9% uptime and global distribution.",
+      "features": ["99.9% Uptime", "Global Distribution", "Real-time Monitoring", "Auto-scaling"]
+    },
+    "cloud": {
+      "title": "Cloud Infrastructure",
+      "description": "Scalable cloud solutions optimized for Web3 applications with advanced security and monitoring.",
+      "features": ["Auto-scaling", "Advanced Security", "Real-time Monitoring", "Cost Optimization"]
+    },
+    "apis": {
+      "title": "API Services",
+      "description": "Comprehensive APIs for blockchain data, transaction processing, and smart contract interactions.",
+      "features": ["RESTful APIs", "GraphQL Support", "Real-time Data", "Rate Limiting"]
+    },
+    "security": {
+      "title": "Security Solutions",
+      "description": "Advanced security measures including multi-signature wallets, hardware security modules, and audit services.",
+      "features": ["Multi-signature", "Hardware Security", "Security Audits", "Risk Assessment"]
+    },
+    "monitoring": {
+      "title": "Monitoring & Analytics",
+      "description": "Comprehensive monitoring tools for blockchain networks, smart contracts, and application performance.",
+      "features": ["Real-time Monitoring", "Performance Analytics", "Alert Systems", "Custom Dashboards"]
+    }
+  },
+  "about": {
+    "title": "About Bitsmove",
+    "subtitle": "Leading the Future of Web3 Technology",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To democratize access to blockchain technology by providing comprehensive, secure, and user-friendly Web3 solutions that empower businesses and individuals to participate in the decentralized economy."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the global leader in Web3 infrastructure and services, enabling seamless adoption of blockchain technology across industries and communities worldwide."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Constantly pushing the boundaries of blockchain technology to create cutting-edge solutions."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Implementing the highest security standards to protect user assets and data."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Maintaining open communication and transparent practices in all our operations."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Building and nurturing a strong community of developers, users, and partners."
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "A diverse team of blockchain experts, developers, and innovators working together to build the future of Web3."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Plaza Independencia, Montevideo, Uruguay",
+      "phone": "+598 96401205",
+      "email": "contact@bitsmove.com",
+      "address_label": "Address",
+      "phone_label": "Phone",
+      "email_label": "Email"
+    },
+    "social": {
+      "title": "Follow Us",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "discord": "Discord"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Bitsmove",
+      "description": "Leading Web3 solutions provider for services, products, and infrastructure."
+    },
+    "services": "Services",
+    "products": "Products",
+    "infrastructure": "Infrastructure",
+    "company_info": "Company",
+    "legal": "Legal",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "copyright": "© 2024 Bitsmove. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "learn_more": "Learn More",
+    "get_started": "Get Started",
+    "contact_us": "Contact Us",
+    "read_more": "Read More",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
