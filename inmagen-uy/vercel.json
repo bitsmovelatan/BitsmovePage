@@ -2,8 +2,15 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist/inmagen-uy/browser",
-  "framework": "angular",
   "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|svg|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
