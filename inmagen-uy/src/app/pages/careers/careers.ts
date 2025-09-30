@@ -75,8 +75,8 @@ export class CareersComponent {
       const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase();
       if (!this.allowedFileTypes.includes(fileExtension)) {
         this.snackBar.open(
-          'Formato no permitido. Solo se aceptan archivos PDF, DOC o DOCX.',
-          'Cerrar',
+          this.translate.get('careers.form.fileTypeError'),
+          this.translate.get('careers.form.close'),
           { duration: 5000, panelClass: ['error-snackbar'] }
         );
         return;
@@ -85,8 +85,8 @@ export class CareersComponent {
       // Validar tamaño
       if (file.size > this.maxFileSize) {
         this.snackBar.open(
-          'El archivo es demasiado grande. Tamaño máximo: 5MB',
-          'Cerrar',
+          this.translate.get('careers.form.fileSizeError'),
+          this.translate.get('careers.form.close'),
           { duration: 5000, panelClass: ['error-snackbar'] }
         );
         return;
@@ -96,8 +96,8 @@ export class CareersComponent {
       this.selectedFileName = file.name;
       
       this.snackBar.open(
-        `CV cargado: ${file.name}`,
-        'OK',
+        `${this.translate.get('careers.form.cvUploaded')}: ${file.name}`,
+        this.translate.get('careers.form.ok'),
         { duration: 3000, panelClass: ['success-snackbar'] }
       );
     }
@@ -121,8 +121,8 @@ export class CareersComponent {
   async onSubmit(): Promise<void> {
     if (this.applicationForm.invalid) {
       this.snackBar.open(
-        'Por favor completa todos los campos obligatorios',
-        'Cerrar',
+        this.translate.get('careers.form.errorIncomplete'),
+        this.translate.get('careers.form.close'),
         { duration: 5000, panelClass: ['error-snackbar'] }
       );
       return;
@@ -130,8 +130,8 @@ export class CareersComponent {
 
     if (!this.selectedFile) {
       this.snackBar.open(
-        'Por favor adjunta tu CV',
-        'Cerrar',
+        this.translate.get('careers.form.cvRequired'),
+        this.translate.get('careers.form.close'),
         { duration: 5000, panelClass: ['error-snackbar'] }
       );
       return;
@@ -156,8 +156,8 @@ export class CareersComponent {
       await this.sendEmail(formData);
 
       this.snackBar.open(
-        '¡Aplicación enviada exitosamente! Nos pondremos en contacto pronto.',
-        'OK',
+        this.translate.get('careers.form.success'),
+        this.translate.get('careers.form.ok'),
         { duration: 5000, panelClass: ['success-snackbar'] }
       );
 
@@ -168,8 +168,8 @@ export class CareersComponent {
     } catch (error) {
       console.error('Error al enviar la aplicación:', error);
       this.snackBar.open(
-        'Error al enviar la aplicación. Por favor intenta nuevamente.',
-        'Cerrar',
+        this.translate.get('careers.form.error'),
+        this.translate.get('careers.form.close'),
         { duration: 5000, panelClass: ['error-snackbar'] }
       );
     } finally {
@@ -206,17 +206,17 @@ export class CareersComponent {
     const field = this.applicationForm.get(fieldName);
     
     if (field?.hasError('required')) {
-      return 'Este campo es obligatorio';
+      return this.translate.get('careers.validation.required');
     }
     if (field?.hasError('email')) {
-      return 'Email inválido';
+      return this.translate.get('careers.validation.email');
     }
     if (field?.hasError('minlength')) {
       const minLength = field.errors?.['minlength'].requiredLength;
-      return `Mínimo ${minLength} caracteres`;
+      return this.translate.get('careers.validation.minlength').replace('{{length}}', minLength);
     }
     if (field?.hasError('pattern')) {
-      return 'Formato inválido';
+      return this.translate.get('careers.validation.phonePattern');
     }
     
     return '';

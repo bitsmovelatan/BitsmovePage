@@ -310,6 +310,19 @@
       "growth": "Oportunidades de crecimiento",
       "environment": "Excelente ambiente laboral"
     },
+    "form": {
+      "cvUploaded": "CV cargado",
+      "cvRequired": "Por favor adjunta tu CV",
+      "errorIncomplete": "Por favor completa todos los campos obligatorios",
+      "ok": "OK",
+      "close": "Cerrar"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "email": "Email inválido",
+      "minlength": "Mínimo {{length}} caracteres",
+      "phonePattern": "Formato inválido (solo números)"
+    },
     "apply": {
       "title": "Postular",
       "name": "Nombre completo",
