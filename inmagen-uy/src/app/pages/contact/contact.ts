@@ -72,7 +72,7 @@ export class ContactComponent {
   }
 
   openWhatsApp(): void {
-    const message = encodeURIComponent('Hola! Me gustaría obtener más información sobre Inmagen.uy');
+    const message = encodeURIComponent('Hola! Me gustaría obtener más información sobre InMagen');
     window.open(`https://wa.me/598${this.contactInfo.whatsapp}?text=${message}`, '_blank');
   }
 

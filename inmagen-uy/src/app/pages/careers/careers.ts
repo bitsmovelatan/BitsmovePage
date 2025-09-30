@@ -150,7 +150,7 @@ export class CareersComponent {
       formData.append('motivation', this.applicationForm.value.motivation);
       formData.append('availability', this.applicationForm.value.availability);
       formData.append('cv', this.selectedFile);
-      formData.append('to', 'admint@bitsmove.com');
+      formData.append('to', 'admin@bitsmove.com');
 
       // Aquí simularemos el envío (en producción, conectarías con tu backend)
       await this.sendEmail(formData);
