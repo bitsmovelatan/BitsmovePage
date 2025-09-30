@@ -31,6 +31,7 @@ export class LayoutComponent {
   currentLang: string = 'es';
   sidenavOpened: boolean = true;
   cartCount: number = 0;
+  isMobile: boolean = false;
   
   menuItems = [
     { path: '/', icon: 'home', labelKey: 'nav.home' },
@@ -52,18 +53,43 @@ export class LayoutComponent {
     public cartService: CartService
   ) {
     this.currentLang = translate.getCurrentLanguage();
+
+    // Detectar si es dispositivo móvil
+    this.checkIfMobile();
     
+    // Escuchar cambios en el tamaño de la ventana
+    window.addEventListener('resize', () => {
+      this.checkIfMobile();
+    });
+
     // Suscribirse al contador del carrito
     this.cartService.cartCount$.subscribe(count => {
       console.log('Carrito actualizado. Nuevo contador:', count);
       this.cartCount = count;
     });
-    
+
     console.log('Layout inicializado. Carrito actual:', this.cartService.getCartCount());
+  }
+
+  private checkIfMobile(): void {
+    this.isMobile = window.innerWidth < 768;
+    // Si es móvil, cerrar el sidebar por defecto
+    if (this.isMobile) {
+      this.sidenavOpened = false;
+    } else {
+      this.sidenavOpened = true;
+    }
   }
 
   toggleSidenav(): void {
     this.sidenavOpened = !this.sidenavOpened;
+  }
+
+  onMenuItemClick(): void {
+    // Cerrar el sidenav en móvil después de seleccionar un item
+    if (this.isMobile) {
+      this.sidenavOpened = false;
+    }
   }
 
   changeLanguage(lang: string): void {
