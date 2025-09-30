@@ -1,0 +1,46 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">{{ t('home.title') }}</h1>
+    <p class="hero-subtitle">{{ t('home.subtitle') }}</p>
+    <p class="hero-description">{{ t('home.description') }}</p>
+    
+    <button mat-raised-button color="primary" class="cta-button" (click)="startJourney()">
+      <mat-icon>arrow_forward</mat-icon>
+      {{ t('home.cta.button') }}
+    </button>
+    <p class="cta-description">{{ t('home.cta.description') }}</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>{{ t('home.features.title') }}</h2>
+    <div class="features-grid">
+      @for (feature of features; track feature.key) {
+        <mat-card class="feature-card">
+          <mat-card-content>
+            <mat-icon class="feature-icon">{{ feature.icon }}</mat-icon>
+            <h3>{{ t('home.features.' + feature.key + '.title') }}</h3>
+            <p>{{ t('home.features.' + feature.key + '.description') }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </section>
+
+  <!-- About Jewish Cuisine -->
+  <section class="about-cuisine">
+    <h2>{{ t('home.info.title') }}</h2>
+    <div class="products-grid">
+      @for (product of products; track product.key) {
+        <mat-card class="product-card">
+          <mat-card-content>
+            <div class="product-icon">{{ product.icon }}</div>
+            <h3>{{ t('home.info.' + product.key + '.title') }}</h3>
+            <p>{{ t('home.info.' + product.key + '.description') }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </section>
+</div>

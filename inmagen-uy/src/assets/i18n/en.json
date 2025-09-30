@@ -1,0 +1,257 @@
+{
+  "app": {
+    "title": "Inmagen.uy",
+    "subtitle": "Jewish Tradition and Flavor"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "catering": "Catering",
+    "contact": "Contact",
+    "careers": "Work with Us"
+  },
+  "home": {
+    "title": "Welcome to Inmagen.uy",
+    "subtitle": "Discover authentic Jewish cuisine",
+    "description": "At Inmagen.uy, we are proud to offer a unique culinary experience with our Jewish appetizers. Each recipe is a tribute to tradition, crafted with fresh ingredients and the care of expert hands. From the sweetness of a Rugelach to the warmth of a freshly baked Challah, we invite you to explore a world of flavors that will enrich your most special moments. Furthermore, with all needs in mind, we have adapted a selection of our classics so you can also enjoy them in their gluten-free version.",
+    "features": {
+      "title": "Why choose Inmagen?",
+      "quality": {
+        "title": "Premium Quality",
+        "description": "Fresh ingredients and traditional recipes passed down through generations"
+      },
+      "tradition": {
+        "title": "Authentic Tradition",
+        "description": "We respect kosher techniques and ancestral customs"
+      },
+      "variety": {
+        "title": "Wide Variety",
+        "description": "From challah to rugelach, we offer all the Jewish classics"
+      },
+      "service": {
+        "title": "Personalized Service",
+        "description": "Dedicated attention for events, catering and special orders"
+      }
+    },
+    "cta": {
+      "button": "Get Started",
+      "description": "Discover our products and services"
+    },
+    "info": {
+      "title": "About Jewish Cuisine",
+      "challah": {
+        "title": "Challah",
+        "description": "Traditional braided bread, symbol of Shabbat and festivities"
+      },
+      "rugelach": {
+        "title": "Rugelach",
+        "description": "Delicate pastry rolls with chocolate, nuts and cinnamon fillings"
+      },
+      "babka": {
+        "title": "Babka",
+        "description": "Sweet braided bread with layers of chocolate or cinnamon"
+      },
+      "bagels": {
+        "title": "Bagels",
+        "description": "Classic New York-style boiled and baked bagels"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Customized solutions for every need",
+    "custom": {
+      "title": "Custom Manufacturing",
+      "description": "We create personalized products according to your specifications. Adapted recipes, premium ingredients and punctual deliveries."
+    },
+    "retail": {
+      "title": "Retail Sales",
+      "description": "Visit us at our store to take your favorite appetizers. Fresh products of the day and personalized attention."
+    },
+    "delivery": {
+      "title": "Delivery",
+      "description": "Receive our products in the comfort of your home. Fast service, secure packaging and real-time tracking."
+    },
+    "corporate": {
+      "title": "Corporate Events",
+      "description": "Professional catering for your company. Executive menus, full service and comprehensive logistics."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Traditional Jewish appetizers made with passion",
+    "categories": {
+      "breads": "Breads",
+      "pastries": "Pastries",
+      "sweets": "Sweets"
+    },
+    "items": {
+      "challah": {
+        "name": "Challah",
+        "description": "Traditional braided bread, perfect for Shabbat"
+      },
+      "bagels": {
+        "name": "Bagels",
+        "description": "Authentic New York-style bagels"
+      },
+      "rugelach": {
+        "name": "Rugelach",
+        "description": "Rolls with chocolate, nuts or cinnamon"
+      },
+      "babka": {
+        "name": "Babka",
+        "description": "Sweet bread with chocolate swirl"
+      },
+      "knish": {
+        "name": "Potato Knish",
+        "description": "Pastry filled with mashed potatoes"
+      },
+      "hamentashen": {
+        "name": "Hamentashen",
+        "description": "Triangular Purim cookies"
+      }
+    },
+    "glutenFree": "Gluten-free available"
+  },
+  "catering": {
+    "title": "Catering Service",
+    "subtitle": "Transform your events into unforgettable experiences",
+    "description": "With over 10 years of experience, we offer specialized catering in Jewish gastronomy for all types of events.",
+    "events": {
+      "title": "Event Types",
+      "weddings": "Weddings",
+      "barMitzvah": "Bar/Bat Mitzvah",
+      "corporate": "Corporate Events",
+      "holidays": "Holiday Celebrations"
+    },
+    "features": {
+      "planning": {
+        "title": "Complete Planning",
+        "description": "We coordinate all details from menu to decoration"
+      },
+      "custom": {
+        "title": "Custom Menus",
+        "description": "We adapt each dish to your preferences and kosher requirements"
+      },
+      "professional": {
+        "title": "Professional Team",
+        "description": "Trained and experienced staff in events"
+      },
+      "quality": {
+        "title": "Quality Guarantee",
+        "description": "Fresh ingredients and same-day preparation"
+      }
+    },
+    "cta": "Request Quote"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you",
+    "infoTitle": "Contact Information",
+    "mapTitle": "Our Location",
+    "formTitle": "Send us a Message",
+    "info": {
+      "address": {
+        "title": "Address",
+        "value": "Pedro Ricaldoni 3634 Bis, Between Juan de Dios Peza and Comercio, La Unión, Montevideo, Uruguay",
+        "action": "View on map"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "25083244",
+        "action": "Call now"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "097619894",
+        "action": "Send message"
+      },
+      "email": {
+        "title": "Email",
+        "value": "admin@bitsmove.com",
+        "action": "Send email"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "weekdays": "Monday to Saturday",
+        "weekdaysTime": "11:00 AM - 10:00 PM",
+        "sunday": "Sunday",
+        "sundayTime": "11:00 AM - 6:00 PM"
+      }
+    },
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "099123456",
+      "subject": "Subject",
+      "subjectPlaceholder": "Product inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "Error sending message. Please try again or contact us via WhatsApp.",
+      "errorIncomplete": "Please complete all fields correctly",
+      "alternative": "Or contact us directly via:",
+      "whatsappButton": "WhatsApp",
+      "callButton": "Call"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Invalid email",
+      "minlength": "Minimum {{length}} characters",
+      "pattern": "Invalid format (numbers only)"
+    }
+  },
+  "careers": {
+    "title": "Work with Us",
+    "subtitle": "Join our team",
+    "description": "We're looking for people passionate about gastronomy and Jewish tradition to join our team.",
+    "positions": {
+      "title": "Available Positions",
+      "baker": {
+        "title": "Baker/Pastry Chef",
+        "description": "Experience in traditional baking and kosher techniques"
+      },
+      "cook": {
+        "title": "Cook",
+        "description": "Knowledge of Jewish gastronomy and kosher cooking"
+      },
+      "sales": {
+        "title": "Salesperson",
+        "description": "Customer service and product knowledge"
+      },
+      "delivery": {
+        "title": "Delivery Driver",
+        "description": "Driver's license and knowledge of Montevideo"
+      }
+    },
+    "benefits": {
+      "title": "Benefits",
+      "salary": "Competitive salary",
+      "training": "Continuous training",
+      "growth": "Growth opportunities",
+      "environment": "Excellent work environment"
+    },
+    "apply": {
+      "title": "Apply",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "position": "Position of interest",
+      "cv": "Attach CV",
+      "message": "Message",
+      "submit": "Submit Application",
+      "success": "Application sent! We'll contact you soon.",
+      "error": "Error sending application. Please try again."
+    }
+  },
+  "footer": {
+    "rights": "© 2024 Inmagen.uy. All rights reserved.",
+    "social": "Follow us on social media"
+  }
+}

@@ -1,0 +1,226 @@
+<div class="contact-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>{{ t('contact.title') }}</h1>
+    <p class="subtitle">{{ t('contact.subtitle') }}</p>
+  </div>
+
+  <div class="contact-content">
+    <!-- Contact Information Cards -->
+    <section class="contact-info-section">
+      <h2>{{ t('contact.infoTitle') }}</h2>
+      
+      <div class="info-cards">
+        <!-- Address Card -->
+        <mat-card class="info-card" (click)="openGoogleMaps()">
+          <mat-card-content>
+            <div class="card-icon">
+              <mat-icon>location_on</mat-icon>
+            </div>
+            <h3>{{ t('contact.info.address.title') }}</h3>
+            <p>{{ t('contact.info.address.value') }}</p>
+            <button mat-button color="primary" class="card-action">
+              <mat-icon>directions</mat-icon>
+              {{ t('contact.info.address.action') }}
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <!-- Phone Card -->
+        <mat-card class="info-card" (click)="callPhone()">
+          <mat-card-content>
+            <div class="card-icon">
+              <mat-icon>phone</mat-icon>
+            </div>
+            <h3>{{ t('contact.info.phone.title') }}</h3>
+            <p class="phone-number">{{ t('contact.info.phone.value') }}</p>
+            <button mat-button color="primary" class="card-action">
+              <mat-icon>call</mat-icon>
+              {{ t('contact.info.phone.action') }}
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <!-- WhatsApp Card -->
+        <mat-card class="info-card whatsapp-card" (click)="openWhatsApp()">
+          <mat-card-content>
+            <div class="card-icon whatsapp-icon">
+              <mat-icon>chat</mat-icon>
+            </div>
+            <h3>{{ t('contact.info.whatsapp.title') }}</h3>
+            <p class="phone-number">{{ t('contact.info.whatsapp.value') }}</p>
+            <button mat-button color="primary" class="card-action">
+              <mat-icon>chat_bubble</mat-icon>
+              {{ t('contact.info.whatsapp.action') }}
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <!-- Email Card -->
+        <mat-card class="info-card" (click)="sendEmail()">
+          <mat-card-content>
+            <div class="card-icon">
+              <mat-icon>email</mat-icon>
+            </div>
+            <h3>{{ t('contact.info.email.title') }}</h3>
+            <p>{{ t('contact.info.email.value') }}</p>
+            <button mat-button color="primary" class="card-action">
+              <mat-icon>send</mat-icon>
+              {{ t('contact.info.email.action') }}
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!-- Hours Card -->
+      <mat-card class="hours-card">
+        <mat-card-content>
+          <div class="hours-header">
+            <mat-icon>access_time</mat-icon>
+            <h3>{{ t('contact.info.hours.title') }}</h3>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="hours-content">
+            <div class="hour-item">
+              <span class="day">{{ t('contact.info.hours.weekdays') }}</span>
+              <span class="time">{{ t('contact.info.hours.weekdaysTime') }}</span>
+            </div>
+            <div class="hour-item">
+              <span class="day">{{ t('contact.info.hours.sunday') }}</span>
+              <span class="time">{{ t('contact.info.hours.sundayTime') }}</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="map-section">
+      <mat-card class="map-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>map</mat-icon>
+            {{ t('contact.mapTitle') }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="map-container">
+            <iframe
+              [src]="mapUrl"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="map-address">
+            <mat-icon>place</mat-icon>
+            <p>{{ t('contact.info.address.value') }}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="form-section">
+      <mat-card class="form-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>mail_outline</mat-icon>
+            {{ t('contact.formTitle') }}
+          </mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ t('contact.form.name') }}</mat-label>
+                <input matInput formControlName="name" [placeholder]="t('contact.form.namePlaceholder')">
+                <mat-icon matPrefix>person</mat-icon>
+                @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                  <mat-error>{{ getErrorMessage('name') }}</mat-error>
+                }
+              </mat-form-field>
+            </div>
+
+            <div class="form-row-double">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ t('contact.form.email') }}</mat-label>
+                <input matInput type="email" formControlName="email" [placeholder]="t('contact.form.emailPlaceholder')">
+                <mat-icon matPrefix>email</mat-icon>
+                @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                  <mat-error>{{ getErrorMessage('email') }}</mat-error>
+                }
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>{{ t('contact.form.phone') }}</mat-label>
+                <input matInput type="tel" formControlName="phone" [placeholder]="t('contact.form.phonePlaceholder')">
+                <mat-icon matPrefix>phone</mat-icon>
+                @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
+                  <mat-error>{{ getErrorMessage('phone') }}</mat-error>
+                }
+              </mat-form-field>
+            </div>
+
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ t('contact.form.subject') }}</mat-label>
+                <input matInput formControlName="subject" [placeholder]="t('contact.form.subjectPlaceholder')">
+                <mat-icon matPrefix>subject</mat-icon>
+                @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+                  <mat-error>{{ getErrorMessage('subject') }}</mat-error>
+                }
+              </mat-form-field>
+            </div>
+
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ t('contact.form.message') }}</mat-label>
+                <textarea matInput formControlName="message" rows="6" 
+                  [placeholder]="t('contact.form.messagePlaceholder')"></textarea>
+                <mat-icon matPrefix>message</mat-icon>
+                @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                  <mat-error>{{ getErrorMessage('message') }}</mat-error>
+                }
+              </mat-form-field>
+            </div>
+
+            <div class="form-actions">
+              <button 
+                mat-raised-button 
+                color="accent" 
+                type="submit" 
+                class="submit-button"
+                [disabled]="contactForm.invalid || isSubmitting">
+                <mat-icon>send</mat-icon>
+                @if (isSubmitting) {
+                  <span>{{ t('contact.form.sending') }}</span>
+                } @else {
+                  <span>{{ t('contact.form.submit') }}</span>
+                }
+              </button>
+            </div>
+          </form>
+
+          <div class="alternative-contact">
+            <p>{{ t('contact.form.alternative') }}</p>
+            <div class="quick-contact-buttons">
+              <button mat-stroked-button (click)="openWhatsApp()" class="whatsapp-button">
+                <mat-icon>chat</mat-icon>
+                {{ t('contact.form.whatsappButton') }}
+              </button>
+              <button mat-stroked-button (click)="callPhone()">
+                <mat-icon>phone</mat-icon>
+                {{ t('contact.form.callButton') }}
+              </button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </section>
+  </div>
+</div>

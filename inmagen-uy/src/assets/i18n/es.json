@@ -1,0 +1,257 @@
+{
+  "app": {
+    "title": "Inmagen.uy",
+    "subtitle": "Tradición y Sabor Judío"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "products": "Productos",
+    "catering": "Catering",
+    "contact": "Contacto",
+    "careers": "Trabaja con Nosotros"
+  },
+  "home": {
+    "title": "Bienvenidos a Inmagen.uy",
+    "subtitle": "Descubre la auténtica cocina judía",
+    "description": "En Inmagen.uy nos enorgullece ofrecer una experiencia culinaria única con nuestros aperitivos judíos. Cada receta es un tributo a la tradición, elaborada con ingredientes frescos y el cuidado de las manos expertas. Desde la dulzura de un Rugelach hasta la calidez de un Challah recién horneado, te invitamos a explorar un mundo de sabores que enriquecerán tus momentos más especiales. Además, pensando en todas las necesidades, hemos adaptado una selección de nuestros clásicos para que también los disfrutes en su versión sin gluten.",
+    "features": {
+      "title": "¿Por qué elegir Inmagen?",
+      "quality": {
+        "title": "Calidad Premium",
+        "description": "Ingredientes frescos y recetas tradicionales transmitidas por generaciones"
+      },
+      "tradition": {
+        "title": "Tradición Auténtica",
+        "description": "Respetamos las técnicas kosher y las costumbres ancestrales"
+      },
+      "variety": {
+        "title": "Amplia Variedad",
+        "description": "Desde challah hasta rugelach, ofrecemos todos los clásicos judíos"
+      },
+      "service": {
+        "title": "Servicio Personalizado",
+        "description": "Atención dedicada para eventos, catering y pedidos especiales"
+      }
+    },
+    "cta": {
+      "button": "Comenzar",
+      "description": "Descubre nuestros productos y servicios"
+    },
+    "info": {
+      "title": "Sobre la Cocina Judía",
+      "challah": {
+        "title": "Challah",
+        "description": "Pan trenzado tradicional, símbolo del Shabbat y las festividades"
+      },
+      "rugelach": {
+        "title": "Rugelach",
+        "description": "Delicados rollos de masa con rellenos de chocolate, nueces y canela"
+      },
+      "babka": {
+        "title": "Babka",
+        "description": "Pan dulce trenzado con capas de chocolate o canela"
+      },
+      "bagels": {
+        "title": "Bagels",
+        "description": "Clásicos bagels hervidos y horneados al estilo Nueva York"
+      }
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones personalizadas para cada necesidad",
+    "custom": {
+      "title": "Fabricación sobre Pedidos",
+      "description": "Creamos productos personalizados según tus especificaciones. Recetas adaptadas, ingredientes premium y entregas puntuales."
+    },
+    "retail": {
+      "title": "Venta al Público",
+      "description": "Visítanos en nuestra tienda para llevar tus aperitivos favoritos. Productos frescos del día y atención personalizada."
+    },
+    "delivery": {
+      "title": "Delivery",
+      "description": "Recibe nuestros productos en la comodidad de tu hogar. Servicio rápido, embalaje seguro y seguimiento en tiempo real."
+    },
+    "corporate": {
+      "title": "Eventos Corporativos",
+      "description": "Catering profesional para tu empresa. Menús ejecutivos, servicio completo y logística integral."
+    }
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "subtitle": "Aperitivos judíos tradicionales elaborados con pasión",
+    "categories": {
+      "breads": "Panes",
+      "pastries": "Pastelería",
+      "sweets": "Dulces"
+    },
+    "items": {
+      "challah": {
+        "name": "Challah",
+        "description": "Pan trenzado tradicional, perfecto para Shabbat"
+      },
+      "bagels": {
+        "name": "Bagels",
+        "description": "Auténticos bagels al estilo Nueva York"
+      },
+      "rugelach": {
+        "name": "Rugelach",
+        "description": "Rollos con chocolate, nueces o canela"
+      },
+      "babka": {
+        "name": "Babka",
+        "description": "Pan dulce con remolino de chocolate"
+      },
+      "knish": {
+        "name": "Knish de Papa",
+        "description": "Empanada rellena de puré de papas"
+      },
+      "hamentashen": {
+        "name": "Hamentashen",
+        "description": "Galletas triangulares de Purim"
+      }
+    },
+    "glutenFree": "Disponible sin gluten"
+  },
+  "catering": {
+    "title": "Servicio de Catering",
+    "subtitle": "Transformamos tus eventos en experiencias inolvidables",
+    "description": "Con más de 10 años de experiencia, ofrecemos catering especializado en gastronomía judía para todo tipo de eventos.",
+    "events": {
+      "title": "Tipos de Eventos",
+      "weddings": "Bodas",
+      "barMitzvah": "Bar/Bat Mitzvá",
+      "corporate": "Eventos Corporativos",
+      "holidays": "Celebraciones Festivas"
+    },
+    "features": {
+      "planning": {
+        "title": "Planificación Completa",
+        "description": "Coordinamos todos los detalles desde el menú hasta la decoración"
+      },
+      "custom": {
+        "title": "Menús Personalizados",
+        "description": "Adaptamos cada plato a tus preferencias y requerimientos kosher"
+      },
+      "professional": {
+        "title": "Equipo Profesional",
+        "description": "Personal capacitado y con experiencia en eventos"
+      },
+      "quality": {
+        "title": "Garantía de Calidad",
+        "description": "Ingredientes frescos y preparación el mismo día del evento"
+      }
+    },
+    "cta": "Solicitar Presupuesto"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte",
+    "infoTitle": "Información de Contacto",
+    "mapTitle": "Nuestra Ubicación",
+    "formTitle": "Envíanos un Mensaje",
+    "info": {
+      "address": {
+        "title": "Dirección",
+        "value": "Pedro Ricaldoni 3634 Bis, Entre Juan de Dios Peza y Comercio, La Unión, Montevideo, Uruguay",
+        "action": "Ver en el mapa"
+      },
+      "phone": {
+        "title": "Teléfono",
+        "value": "25083244",
+        "action": "Llamar ahora"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "097619894",
+        "action": "Enviar mensaje"
+      },
+      "email": {
+        "title": "Email",
+        "value": "admin@bitsmove.com",
+        "action": "Enviar email"
+      },
+      "hours": {
+        "title": "Horarios de Atención",
+        "weekdays": "Lunes a Sábado",
+        "weekdaysTime": "11:00 AM - 10:00 PM",
+        "sunday": "Domingo",
+        "sundayTime": "11:00 AM - 6:00 PM"
+      }
+    },
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Email",
+      "emailPlaceholder": "juan@example.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "099123456",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Consulta sobre productos",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.",
+      "error": "Error al enviar el mensaje. Por favor intenta nuevamente o contáctanos por WhatsApp.",
+      "errorIncomplete": "Por favor completa todos los campos correctamente",
+      "alternative": "O contáctanos directamente por:",
+      "whatsappButton": "WhatsApp",
+      "callButton": "Llamar"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "email": "Email inválido",
+      "minlength": "Mínimo {{length}} caracteres",
+      "pattern": "Formato inválido (solo números)"
+    }
+  },
+  "careers": {
+    "title": "Trabaja con Nosotros",
+    "subtitle": "Únete a nuestro equipo",
+    "description": "Buscamos personas apasionadas por la gastronomía y la tradición judía para formar parte de nuestro equipo.",
+    "positions": {
+      "title": "Posiciones Disponibles",
+      "baker": {
+        "title": "Panadero/Repostero",
+        "description": "Experiencia en panadería tradicional y técnicas kosher"
+      },
+      "cook": {
+        "title": "Cocinero",
+        "description": "Conocimiento de gastronomía judía y cocina kosher"
+      },
+      "sales": {
+        "title": "Vendedor",
+        "description": "Atención al cliente y conocimiento de productos"
+      },
+      "delivery": {
+        "title": "Repartidor",
+        "description": "Licencia de conducir y conocimiento de Montevideo"
+      }
+    },
+    "benefits": {
+      "title": "Beneficios",
+      "salary": "Salario competitivo",
+      "training": "Capacitación continua",
+      "growth": "Oportunidades de crecimiento",
+      "environment": "Excelente ambiente laboral"
+    },
+    "apply": {
+      "title": "Postular",
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "position": "Posición de interés",
+      "cv": "Adjuntar CV",
+      "message": "Mensaje",
+      "submit": "Enviar Postulación",
+      "success": "¡Postulación enviada! Te contactaremos pronto.",
+      "error": "Error al enviar la postulación. Por favor intenta nuevamente."
+    }
+  },
+  "footer": {
+    "rights": "© 2024 Inmagen.uy. Todos los derechos reservados.",
+    "social": "Síguenos en redes sociales"
+  }
+}
