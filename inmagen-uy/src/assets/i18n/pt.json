@@ -266,6 +266,7 @@
         "sundayTime": "11:00 AM - 6:00 PM"
       }
     },
+    "whatsappMessage": "Olá! Gostaria de obter mais informações sobre os produtos da Inmagen",
     "form": {
       "name": "Nome completo",
       "namePlaceholder": "João Silva",
@@ -282,6 +283,8 @@
       "success": "Mensagem enviada com sucesso! Entraremos em contato em breve.",
       "error": "Erro ao enviar mensagem. Por favor, tente novamente ou entre em contato via WhatsApp.",
       "errorIncomplete": "Por favor, preencha todos os campos corretamente",
+      "ok": "OK",
+      "close": "Fechar",
       "alternative": "Ou entre em contato diretamente por:",
       "whatsappButton": "WhatsApp",
       "callButton": "Ligar"

@@ -72,7 +72,7 @@ export class ContactComponent {
   }
 
   openWhatsApp(): void {
-    const message = encodeURIComponent('Hola! Me gustaría obtener más información sobre InMagen');
+    const message = encodeURIComponent(this.translate.get('contact.whatsappMessage'));
     window.open(`https://wa.me/598${this.contactInfo.whatsapp}?text=${message}`, '_blank');
   }
 
@@ -93,7 +93,7 @@ export class ContactComponent {
     if (this.contactForm.invalid) {
       this.snackBar.open(
         this.translate.get('contact.form.errorIncomplete'),
-        'Cerrar',
+        this.translate.get('contact.form.close'),
         { duration: 5000, panelClass: ['error-snackbar'] }
       );
       return;
@@ -116,7 +116,7 @@ export class ContactComponent {
 
       this.snackBar.open(
         this.translate.get('contact.form.success'),
-        'OK',
+        this.translate.get('contact.form.ok'),
         { duration: 5000, panelClass: ['success-snackbar'] }
       );
 
@@ -126,7 +126,7 @@ export class ContactComponent {
       console.error('Error al enviar el mensaje:', error);
       this.snackBar.open(
         this.translate.get('contact.form.error'),
-        'Cerrar',
+        this.translate.get('contact.form.close'),
         { duration: 5000, panelClass: ['error-snackbar'] }
       );
     } finally {
