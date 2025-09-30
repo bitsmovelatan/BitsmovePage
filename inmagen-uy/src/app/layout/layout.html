@@ -12,6 +12,13 @@
           <span matListItemTitle>{{ getMenuLabel(item.labelKey) }}</span>
         </a>
       }
+      
+      <!-- Cart Item -->
+      <a mat-list-item class="cart-item" [routerLink]="'/cart'" routerLinkActive="active" 
+         [matBadge]="cartCount" matBadgeColor="warn" [matBadgeHidden]="cartCount === 0">
+        <mat-icon matListItemIcon>shopping_cart</mat-icon>
+        <span matListItemTitle>{{ t('nav.cart') }} ({{ cartCount }})</span>
+      </a>
     </mat-nav-list>
 
     <div class="sidenav-footer">

@@ -1,0 +1,140 @@
+<div class="cart-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>🛒 Mi Pedido</h1>
+    <p class="subtitle">{{ cartItems.length }} productos en tu carrito</p>
+  </div>
+
+  @if (cartItems.length === 0) {
+    <!-- Empty Cart -->
+    <mat-card class="empty-cart">
+      <mat-card-content>
+        <mat-icon class="empty-icon">shopping_cart</mat-icon>
+        <h2>Tu carrito está vacío</h2>
+        <p>Agrega productos desde nuestra sección de Productos</p>
+        <button mat-raised-button color="primary" (click)="continueShopping()">
+          <mat-icon>restaurant</mat-icon>
+          Ver Productos
+        </button>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <!-- Cart with Items -->
+    <div class="cart-content">
+      <!-- Cart Items -->
+      <section class="cart-items-section">
+        @for (item of cartItems; track item.name) {
+          <mat-card class="cart-item-card">
+            <div class="cart-item">
+              <!-- Product Image -->
+              <div class="item-image">
+                <img [src]="item.imageUrl" [alt]="item.name">
+                @if (item.glutenFree) {
+                  <div class="gluten-badge">
+                    <mat-icon>eco</mat-icon>
+                  </div>
+                }
+              </div>
+
+              <!-- Product Info -->
+              <div class="item-info">
+                <h3>{{ item.name }}</h3>
+                <p class="item-price">{{ item.price }} c/u</p>
+              </div>
+
+              <!-- Quantity Controls -->
+              <div class="quantity-controls">
+                <button mat-icon-button (click)="decreaseQuantity(item)">
+                  <mat-icon>remove_circle_outline</mat-icon>
+                </button>
+                <span class="quantity">{{ item.quantity }}</span>
+                <button mat-icon-button (click)="increaseQuantity(item)">
+                  <mat-icon>add_circle_outline</mat-icon>
+                </button>
+              </div>
+
+              <!-- Item Total -->
+              <div class="item-total">
+                <p class="total-label">Subtotal</p>
+                <p class="total-price">\${{ getItemTotal(item) }}</p>
+              </div>
+
+              <!-- Remove Button -->
+              <button mat-icon-button class="remove-button" (click)="removeItem(item)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card>
+        }
+      </section>
+
+      <!-- Order Summary -->
+      <section class="summary-section">
+        <mat-card class="summary-card">
+          <mat-card-header>
+            <mat-card-title>Resumen del Pedido</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="summary-row">
+              <span>Productos</span>
+              <span>{{ cartItems.length }}</span>
+            </div>
+            <div class="summary-row">
+              <span>Cantidad Total</span>
+              <span>{{ cartService.getCartCount() }} items</span>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span class="total-amount">\${{ cartTotal }}</span>
+            </div>
+
+            <button mat-raised-button color="accent" class="checkout-button" (click)="proceedToCheckout()">
+              <mat-icon>shopping_bag</mat-icon>
+              Finalizar Pedido por WhatsApp
+            </button>
+
+            <button mat-button class="continue-shopping" (click)="continueShopping()">
+              <mat-icon>arrow_back</mat-icon>
+              Continuar Comprando
+            </button>
+
+            <button mat-button color="warn" class="clear-cart" (click)="clearCart()">
+              <mat-icon>delete_sweep</mat-icon>
+              Vaciar Carrito
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <!-- Payment Info -->
+        <mat-card class="info-card">
+          <mat-card-content>
+            <div class="info-item">
+              <mat-icon>local_shipping</mat-icon>
+              <div>
+                <h4>Envío Gratis</h4>
+                <p>En pedidos mayores a $1000</p>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="info-item">
+              <mat-icon>verified</mat-icon>
+              <div>
+                <h4>Productos Kosher</h4>
+                <p>Certificación garantizada</p>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="info-item">
+              <mat-icon>schedule</mat-icon>
+              <div>
+                <h4>Entrega el Mismo Día</h4>
+                <p>Para pedidos antes de las 14:00</p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </section>
+    </div>
+  }
+</div>

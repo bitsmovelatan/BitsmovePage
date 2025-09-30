@@ -1,1 +1,90 @@
-<p>services works!</p>
+<div class="services-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>{{ t('services.title') }}</h1>
+    <p class="subtitle">{{ t('services.subtitle') }}</p>
+  </div>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+    @for (service of services; track service.key) {
+      <mat-card class="service-card" [style.border-left-color]="service.color">
+        <div class="service-icon" [style.background]="'linear-gradient(135deg, ' + service.gradient[0] + ', ' + service.gradient[1] + ')'">
+          <mat-icon>{{ service.icon }}</mat-icon>
+        </div>
+        
+        <mat-card-header>
+          <mat-card-title>{{ t('services.' + service.key + '.title') }}</mat-card-title>
+          <mat-card-subtitle>{{ t('services.' + service.key + '.description') }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p class="service-details">{{ t('services.' + service.key + '.details') }}</p>
+
+          <div class="features-list">
+            <h4>Características:</h4>
+            @for (feature of getServiceFeatures(service.key); track feature) {
+              <div class="feature-item">
+                <mat-icon [style.color]="service.color">check_circle</mat-icon>
+                <span>{{ feature }}</span>
+              </div>
+            }
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          @if (service.key === 'catering') {
+            <button mat-raised-button [style.background-color]="service.color" [style.color]="'white'" (click)="goToCatering()">
+              <mat-icon>arrow_forward</mat-icon>
+              Ver más sobre Catering
+            </button>
+          } @else {
+            <button mat-raised-button [style.background-color]="service.color" [style.color]="'white'" (click)="contactUs()">
+              <mat-icon>contact_mail</mat-icon>
+              Solicitar Información
+            </button>
+          }
+        </mat-card-actions>
+      </mat-card>
+    }
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <h2>{{ t('services.process.title') }}</h2>
+    <div class="process-steps">
+      @for (step of processSteps; track step.key) {
+        <mat-card class="step-card">
+          <mat-card-content>
+            <div class="step-icon">
+              <mat-icon>{{ step.icon }}</mat-icon>
+            </div>
+            <h3>{{ t('services.process.' + step.key + '.title') }}</h3>
+            <p>{{ t('services.process.' + step.key + '.description') }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <mat-card class="cta-card">
+      <mat-card-content>
+        <mat-icon class="cta-icon">support_agent</mat-icon>
+        <h2>¿Listo para comenzar?</h2>
+        <p>Contáctanos y cuéntanos sobre tu proyecto. Estaremos encantados de ayudarte.</p>
+        <div class="cta-buttons">
+          <button mat-raised-button color="primary" (click)="contactUs()">
+            <mat-icon>email</mat-icon>
+            Contactar
+          </button>
+          <button mat-raised-button (click)="contactUs()">
+            <mat-icon>call</mat-icon>
+            25083244
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>

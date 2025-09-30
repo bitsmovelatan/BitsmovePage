@@ -1,1 +1,130 @@
-<p>products works!</p>
+<div class="products-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>{{ t('products.title') }}</h1>
+    <p class="subtitle">{{ t('products.subtitle') }}</p>
+    <div class="gluten-free-badge">
+      <mat-icon>eco</mat-icon>
+      <span>{{ getGlutenFreeCount() }} {{ t('products.glutenFreeCount') }}</span>
+    </div>
+  </div>
+
+  <!-- Category Filter -->
+  <section class="category-filter">
+    <div class="filter-chips">
+      @for (category of categories; track category.id) {
+        <button 
+          mat-raised-button 
+          [class.active]="selectedCategory === category.id"
+          (click)="filterProducts(category.id)"
+          class="filter-chip">
+          <mat-icon>{{ category.icon }}</mat-icon>
+          {{ getCategoryName(category.labelKey) }}
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="products-grid">
+    @for (product of getFilteredProducts(); track product.key) {
+      <mat-card class="product-card">
+        <!-- Product Image -->
+        <div class="product-image-container">
+          <img [src]="product.imageUrl" [alt]="getProductName(product.key)" class="product-image">
+          @if (product.glutenFree) {
+            <div class="gluten-free-tag">
+              <mat-icon>eco</mat-icon>
+              <span>{{ t('products.glutenFree') }}</span>
+            </div>
+          }
+          @if (product.price) {
+            <div class="price-tag">
+              {{ product.price }}
+            </div>
+          }
+        </div>
+
+        <!-- Product Content -->
+        <mat-card-header>
+          <mat-card-title>{{ getProductName(product.key) }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p class="product-description">{{ getProductDescription(product.key) }}</p>
+
+          @if (getProductFeatures(product.key).length > 0) {
+            <div class="product-features">
+              @for (feature of getProductFeatures(product.key); track feature) {
+                <mat-chip class="feature-chip">
+                  <mat-icon matChipAvatar>check_circle</mat-icon>
+                  {{ feature }}
+                </mat-chip>
+              }
+            </div>
+          }
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-button color="primary" (click)="addToCart(product)">
+            <mat-icon>shopping_cart</mat-icon>
+            {{ t('products.addToCart') }}
+          </button>
+          <button mat-button>
+            <mat-icon>info</mat-icon>
+            {{ t('products.moreInfo') }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </section>
+
+  <!-- Special Offer Banner -->
+  <section class="special-offer">
+    <mat-card class="offer-card">
+      <mat-card-content>
+        <div class="offer-content">
+          <mat-icon class="offer-icon">local_offer</mat-icon>
+          <div class="offer-text">
+            <h3>{{ t('products.specialOffer') }}</h3>
+            <p>{{ t('products.specialOfferDesc') }}</p>
+          </div>
+          <button mat-raised-button color="accent">
+            <mat-icon>shopping_bag</mat-icon>
+            {{ t('products.makeOrder') }}
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <!-- Product Info Section -->
+  <section class="product-info">
+    <mat-card>
+      <mat-card-content>
+        <div class="info-grid">
+          <div class="info-item">
+            <mat-icon>verified</mat-icon>
+            <h4>{{ t('products.info.kosher.title') }}</h4>
+            <p>{{ t('products.info.kosher.description') }}</p>
+          </div>
+          <div class="info-item">
+            <mat-icon>local_shipping</mat-icon>
+            <h4>{{ t('products.info.delivery.title') }}</h4>
+            <p>{{ t('products.info.delivery.description') }}</p>
+          </div>
+          <div class="info-item">
+            <mat-icon>schedule</mat-icon>
+            <h4>{{ t('products.info.fresh.title') }}</h4>
+            <p>{{ t('products.info.fresh.description') }}</p>
+          </div>
+          <div class="info-item">
+            <mat-icon>star</mat-icon>
+            <h4>{{ t('products.info.traditional.title') }}</h4>
+            <p>{{ t('products.info.traditional.description') }}</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>

@@ -9,7 +9,8 @@
     "products": "Productos",
     "catering": "Catering",
     "contact": "Contacto",
-    "careers": "Trabaja con Nosotros"
+    "careers": "Trabaja con Nosotros",
+    "cart": "Mi Pedido"
   },
   "home": {
     "title": "Bienvenidos a Inmagen.uy",
@@ -58,61 +59,130 @@
       }
     }
   },
-  "services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Soluciones personalizadas para cada necesidad",
-    "custom": {
-      "title": "Fabricación sobre Pedidos",
-      "description": "Creamos productos personalizados según tus especificaciones. Recetas adaptadas, ingredientes premium y entregas puntuales."
-    },
-    "retail": {
-      "title": "Venta al Público",
-      "description": "Visítanos en nuestra tienda para llevar tus aperitivos favoritos. Productos frescos del día y atención personalizada."
-    },
-    "delivery": {
-      "title": "Delivery",
-      "description": "Recibe nuestros productos en la comodidad de tu hogar. Servicio rápido, embalaje seguro y seguimiento en tiempo real."
-    },
-    "corporate": {
-      "title": "Eventos Corporativos",
-      "description": "Catering profesional para tu empresa. Menús ejecutivos, servicio completo y logística integral."
-    }
-  },
   "products": {
     "title": "Nuestros Productos",
     "subtitle": "Aperitivos judíos tradicionales elaborados con pasión",
+    "glutenFreeCount": "productos disponibles sin gluten",
     "categories": {
+      "all": "Todos",
       "breads": "Panes",
       "pastries": "Pastelería",
       "sweets": "Dulces"
     },
+    "glutenFree": "Sin Gluten",
+    "specialOffer": "Oferta Especial",
+    "specialOfferDesc": "20% de descuento en pedidos mayores a $5000",
+    "addToCart": "Agregar al pedido",
+    "addedToCart": "agregado al pedido",
+    "viewCart": "Ver Carrito",
+    "moreInfo": "Más info",
+    "makeOrder": "Hacer pedido",
     "items": {
       "challah": {
         "name": "Challah",
-        "description": "Pan trenzado tradicional, perfecto para Shabbat"
+        "description": "Pan trenzado tradicional judío, símbolo del Shabbat. Su corteza dorada y su interior suave y ligeramente dulce lo hacen perfecto para acompañar cualquier comida.",
+        "features": ["Tradicional", "Hecho a mano", "Fresco del día"]
       },
       "bagels": {
         "name": "Bagels",
-        "description": "Auténticos bagels al estilo Nueva York"
+        "description": "Auténticos bagels al estilo de Nueva York, hervidos y luego horneados para conseguir esa textura exterior crujiente y un interior masticable.",
+        "features": ["Estilo NY", "Sin gluten disponible", "Varios sabores"]
       },
       "rugelach": {
         "name": "Rugelach",
-        "description": "Rollos con chocolate, nueces o canela"
+        "description": "Pequeños rollos de masa hojaldrada con relleno irresistible de chocolate, canela y nueces. Un clásico de las celebraciones judías.",
+        "features": ["Tradicional", "Rellenos variados", "Hojaldrado"]
       },
       "babka": {
         "name": "Babka",
-        "description": "Pan dulce con remolino de chocolate"
-      },
-      "knish": {
-        "name": "Knish de Papa",
-        "description": "Empanada rellena de puré de papas"
+        "description": "Pan trenzado, denso y húmedo, lleno de sabor. Nuestro babka de chocolate es una verdadera obra de arte, con capas de masa suave y un remolino de chocolate intenso.",
+        "features": ["Chocolate intenso", "Textura húmeda", "Artesanal"]
       },
       "hamentashen": {
         "name": "Hamentashen",
-        "description": "Galletas triangulares de Purim"
+        "description": "Galletas con forma de triángulo, rellenas de diferentes mermeladas o semillas de amapola. Son un símbolo de la fiesta de Purim.",
+        "features": ["Tradicional de Purim", "Rellenos variados", "Forma triangular"]
+      },
+      "knish": {
+        "name": "Knish de Papa",
+        "description": "Bollo de masa horneada, relleno de puré de papas y cebolla. Un aperitivo sustancioso, ideal para una comida festiva.",
+        "features": ["Sustancioso", "Sin gluten", "Relleno cremoso"]
+      },
+      "strudel": {
+        "name": "Strudel",
+        "description": "Pastel enrollado de masa fina y crujiente, tradicionalmente relleno de manzanas, canela y pasas. Un postre reconfortante de otoño.",
+        "features": ["Masa crujiente", "Manzanas frescas", "Sin gluten"]
+      },
+      "brownie": {
+        "name": "Brownie",
+        "description": "Pastel de chocolate denso y húmedo, con un sabor intenso a cacao. Disponible en versión sin gluten.",
+        "features": ["Chocolate belga", "Denso y húmedo", "Sin gluten"]
+      },
+      "tarta": {
+        "name": "Tarta de Manzanas",
+        "description": "Un postre clásico con un relleno generoso de rodajas de manzana, canela y azúcar, cubierto con masa quebrada.",
+        "features": ["Clásico", "Manzanas frescas", "Sin gluten"]
       }
     },
-    "glutenFree": "Disponible sin gluten"
+    "info": {
+      "kosher": {
+        "title": "Calidad Kosher",
+        "description": "Todos nuestros productos siguen las estrictas normas kosher"
+      },
+      "delivery": {
+        "title": "Entrega Rápida",
+        "description": "Delivery en el día para pedidos antes de las 14:00"
+      },
+      "fresh": {
+        "title": "Frescos del Día",
+        "description": "Elaborados diariamente con ingredientes frescos"
+      },
+      "traditional": {
+        "title": "Recetas Tradicionales",
+        "description": "Transmitidas de generación en generación"
+      }
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones personalizadas para cada necesidad",
+    "orders": {
+      "title": "Pedidos Personalizados",
+      "description": "Fabricación sobre pedidos adaptada a tus necesidades específicas",
+      "details": "Creamos productos personalizados según tus especificaciones exactas. Ya sea para un evento familiar, una celebración religiosa o simplemente para disfrutar en casa, adaptamos nuestras recetas tradicionales a tus preferencias. Trabajamos con ingredientes premium, respetando las normas kosher y garantizando la frescura en cada entrega.",
+      "features": ["Recetas personalizadas", "Ingredientes premium", "Entregas puntuales", "Adaptación kosher", "Pedidos desde 24hs"]
+    },
+    "counter": {
+      "title": "Venta en Mostrador",
+      "description": "Visítanos y lleva tus productos favoritos frescos del día",
+      "details": "Nuestra tienda en La Unión te espera con una amplia variedad de productos frescos elaborados diariamente. Podrás ver, elegir y llevar tus aperitivos judíos favoritos en el momento. Nuestro personal especializado te asesorará sobre cada producto, sus ingredientes y las mejores formas de disfrutarlos. Horario: Lun-Sáb 11:00-22:00, Dom 11:00-18:00.",
+      "features": ["Productos del día", "Atención personalizada", "Asesoramiento experto", "Sin esperas", "Variedad completa"]
+    },
+    "catering": {
+      "title": "Catering para Eventos",
+      "description": "Servicios profesionales para bodas, bar mitzvah y eventos especiales",
+      "details": "Transformamos tus eventos en experiencias gastronómicas inolvidables. Con más de 10 años de experiencia en catering kosher, ofrecemos servicios completos para bodas, bar/bat mitzvah, brit milá, eventos corporativos y celebraciones festivas judías. Incluye planificación de menú, coordinación logística, personal especializado y montaje completo.",
+      "features": ["Menús personalizados", "Coordinación completa", "Personal capacitado", "Montaje incluido", "Certificación kosher"]
+    },
+    "process": {
+      "title": "Cómo Trabajamos",
+      "step1": {
+        "title": "1. Consulta",
+        "description": "Conversamos sobre tus necesidades"
+      },
+      "step2": {
+        "title": "2. Propuesta",
+        "description": "Diseñamos la solución perfecta"
+      },
+      "step3": {
+        "title": "3. Producción",
+        "description": "Elaboramos con dedicación"
+      },
+      "step4": {
+        "title": "4. Entrega",
+        "description": "Entregamos con puntualidad"
+      }
+    }
   },
   "catering": {
     "title": "Servicio de Catering",

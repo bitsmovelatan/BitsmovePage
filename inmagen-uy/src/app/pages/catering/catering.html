@@ -1,1 +1,238 @@
-<p>catering works!</p>
+<div class="catering-container">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>{{ t('catering.title') }}</h1>
+      <p class="subtitle">{{ t('catering.subtitle') }}</p>
+      <p class="description">{{ t('catering.description') }}</p>
+    </div>
+  </div>
+
+  <!-- Event Types Gallery -->
+  <section class="events-section">
+    <h2>{{ t('catering.events.title') }}</h2>
+    <div class="events-grid">
+      @for (event of eventTypes; track event.value) {
+        <mat-card class="event-card">
+          <div class="event-image" [style.background-image]="'url(' + event.imageUrl + ')'">
+            <div class="event-overlay">
+              <mat-icon>{{ event.icon }}</mat-icon>
+              <h3>{{ getEventTypeName(event.value) }}</h3>
+            </div>
+          </div>
+        </mat-card>
+      }
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="features-grid">
+      @for (feature of features; track feature.key) {
+        <mat-card class="feature-card">
+          <mat-card-content>
+            <div class="feature-icon">
+              <mat-icon>{{ feature.icon }}</mat-icon>
+            </div>
+            <h3>{{ getFeatureTitle(feature.key) }}</h3>
+            <p>{{ getFeatureDescription(feature.key) }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="packages-section">
+    <h2>Nuestros Paquetes</h2>
+    <div class="packages-grid">
+      @for (package of packages; track package.name) {
+        <mat-card class="package-card" [class.popular]="package.popular">
+          @if (package.popular) {
+            <div class="popular-badge">
+              <mat-icon>star</mat-icon>
+              <span>MÁS POPULAR</span>
+            </div>
+          }
+          <mat-card-header>
+            <mat-card-title>{{ package.name }}</mat-card-title>
+            <mat-card-subtitle>{{ package.guests }} invitados</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="package-price">{{ package.price }}</div>
+            <div class="package-features">
+              @for (feature of package.features; track feature) {
+                <div class="feature-item">
+                  <mat-icon [style.color]="package.color">check_circle</mat-icon>
+                  <span>{{ feature }}</span>
+                </div>
+              }
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button [style.background-color]="package.color" [style.color]="'white'" class="select-package-btn">
+              <mat-icon>arrow_forward</mat-icon>
+              Seleccionar
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="quote-section">
+    <mat-card class="quote-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>request_quote</mat-icon>
+          {{ t('catering.cta') }}
+        </mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+          <div class="form-row-double">
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre completo</mat-label>
+              <input matInput formControlName="name" placeholder="Juan Pérez">
+              <mat-icon matPrefix>person</mat-icon>
+              @if (quoteForm.get('name')?.invalid && quoteForm.get('name')?.touched) {
+                <mat-error>{{ getErrorMessage('name') }}</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" formControlName="email" placeholder="juan@example.com">
+              <mat-icon matPrefix>email</mat-icon>
+              @if (quoteForm.get('email')?.invalid && quoteForm.get('email')?.touched) {
+                <mat-error>{{ getErrorMessage('email') }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-row-double">
+            <mat-form-field appearance="outline">
+              <mat-label>Teléfono</mat-label>
+              <input matInput type="tel" formControlName="phone" placeholder="099123456">
+              <mat-icon matPrefix>phone</mat-icon>
+              @if (quoteForm.get('phone')?.invalid && quoteForm.get('phone')?.touched) {
+                <mat-error>{{ getErrorMessage('phone') }}</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Tipo de Evento</mat-label>
+              <mat-select formControlName="eventType">
+                @for (event of eventTypes; track event.value) {
+                  <mat-option [value]="event.value">{{ getEventTypeName(event.value) }}</mat-option>
+                }
+              </mat-select>
+              <mat-icon matPrefix>event</mat-icon>
+              @if (quoteForm.get('eventType')?.invalid && quoteForm.get('eventType')?.touched) {
+                <mat-error>{{ getErrorMessage('eventType') }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-row-double">
+            <mat-form-field appearance="outline">
+              <mat-label>Fecha del Evento</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="eventDate">
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-icon matPrefix>calendar_today</mat-icon>
+              @if (quoteForm.get('eventDate')?.invalid && quoteForm.get('eventDate')?.touched) {
+                <mat-error>{{ getErrorMessage('eventDate') }}</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Número de Invitados</mat-label>
+              <input matInput type="number" formControlName="guests" placeholder="100">
+              <mat-icon matPrefix>people</mat-icon>
+              @if (quoteForm.get('guests')?.invalid && quoteForm.get('guests')?.touched) {
+                <mat-error>{{ getErrorMessage('guests') }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Paquete de Interés</mat-label>
+              <mat-select formControlName="package">
+                @for (pkg of packages; track pkg.name) {
+                  <mat-option [value]="pkg.name">{{ pkg.name }} - {{ pkg.price }} ({{ pkg.guests }} invitados)</mat-option>
+                }
+              </mat-select>
+              <mat-icon matPrefix>card_giftcard</mat-icon>
+              @if (quoteForm.get('package')?.invalid && quoteForm.get('package')?.touched) {
+                <mat-error>{{ getErrorMessage('package') }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Detalles del Evento / Preferencias</mat-label>
+              <textarea matInput formControlName="message" rows="4" 
+                placeholder="Cuéntanos sobre tu evento, preferencias alimentarias, estilo de servicio, etc."></textarea>
+              <mat-icon matPrefix>notes</mat-icon>
+              @if (quoteForm.get('message')?.invalid && quoteForm.get('message')?.touched) {
+                <mat-error>{{ getErrorMessage('message') }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-actions">
+            <button 
+              mat-raised-button 
+              color="accent" 
+              type="submit" 
+              class="submit-button"
+              [disabled]="quoteForm.invalid || isSubmitting">
+              <mat-icon>send</mat-icon>
+              @if (isSubmitting) {
+                <span>Enviando...</span>
+              } @else {
+                <span>Solicitar Presupuesto</span>
+              }
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us-section">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="stats-grid">
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Años de Experiencia</div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Eventos Realizados</div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Certificación Kosher</div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="stat-card">
+        <mat-card-content>
+          <div class="stat-number">5★</div>
+          <div class="stat-label">Calificación Promedio</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+</div>

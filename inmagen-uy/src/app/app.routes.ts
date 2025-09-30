@@ -6,6 +6,7 @@ import { ProductsComponent } from './pages/products/products';
 import { CateringComponent } from './pages/catering/catering';
 import { ContactComponent } from './pages/contact/contact';
 import { CareersComponent } from './pages/careers/careers';
+import { CartComponent } from './pages/cart/cart';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,7 @@ export const routes: Routes = [
       { path: 'catering', component: CateringComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'careers', component: CareersComponent },
+      { path: 'cart', component: CartComponent },
       { path: '**', redirectTo: '' }
     ]
   }

@@ -9,7 +9,8 @@
     "products": "Products",
     "catering": "Catering",
     "contact": "Contact",
-    "careers": "Work with Us"
+    "careers": "Work with Us",
+    "cart": "My Order"
   },
   "home": {
     "title": "Welcome to Inmagen.uy",
@@ -61,58 +62,127 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Customized solutions for every need",
-    "custom": {
-      "title": "Custom Manufacturing",
-      "description": "We create personalized products according to your specifications. Adapted recipes, premium ingredients and punctual deliveries."
+    "orders": {
+      "title": "Custom Orders",
+      "description": "Made-to-order production adapted to your specific needs",
+      "details": "We create custom products according to your exact specifications. Whether for a family event, religious celebration, or simply to enjoy at home, we adapt our traditional recipes to your preferences. We work with premium ingredients, respecting kosher standards and guaranteeing freshness in every delivery.",
+      "features": ["Custom recipes", "Premium ingredients", "Punctual deliveries", "Kosher adaptation", "Orders from 24hrs"]
     },
-    "retail": {
-      "title": "Retail Sales",
-      "description": "Visit us at our store to take your favorite appetizers. Fresh products of the day and personalized attention."
+    "counter": {
+      "title": "Counter Sales",
+      "description": "Visit us and take your favorite fresh products of the day",
+      "details": "Our store in La Unión awaits you with a wide variety of fresh products made daily. You can see, choose and take your favorite Jewish appetizers on the spot. Our specialized staff will advise you on each product, its ingredients and the best ways to enjoy them. Hours: Mon-Sat 11:00-22:00, Sun 11:00-18:00.",
+      "features": ["Daily products", "Personalized attention", "Expert advice", "No waiting", "Complete variety"]
     },
-    "delivery": {
-      "title": "Delivery",
-      "description": "Receive our products in the comfort of your home. Fast service, secure packaging and real-time tracking."
+    "catering": {
+      "title": "Event Catering",
+      "description": "Professional services for weddings, bar mitzvah and special events",
+      "details": "We transform your events into unforgettable gastronomic experiences. With over 10 years of experience in kosher catering, we offer complete services for weddings, bar/bat mitzvah, brit milah, corporate events and Jewish festive celebrations. Includes menu planning, logistical coordination, specialized staff and complete setup.",
+      "features": ["Custom menus", "Complete coordination", "Trained staff", "Setup included", "Kosher certification"]
     },
-    "corporate": {
-      "title": "Corporate Events",
-      "description": "Professional catering for your company. Executive menus, full service and comprehensive logistics."
+    "process": {
+      "title": "How We Work",
+      "step1": {
+        "title": "1. Consultation",
+        "description": "We talk about your needs"
+      },
+      "step2": {
+        "title": "2. Proposal",
+        "description": "We design the perfect solution"
+      },
+      "step3": {
+        "title": "3. Production",
+        "description": "We elaborate with dedication"
+      },
+      "step4": {
+        "title": "4. Delivery",
+        "description": "We deliver with punctuality"
+      }
     }
   },
   "products": {
     "title": "Our Products",
     "subtitle": "Traditional Jewish appetizers made with passion",
+    "glutenFreeCount": "gluten-free products available",
     "categories": {
+      "all": "All",
       "breads": "Breads",
       "pastries": "Pastries",
       "sweets": "Sweets"
     },
+    "glutenFree": "Gluten Free",
+    "specialOffer": "Special Offer",
+    "specialOfferDesc": "20% discount on orders over $5000",
+    "addToCart": "Add to order",
+    "addedToCart": "added to order",
+    "viewCart": "View Cart",
+    "moreInfo": "More info",
+    "makeOrder": "Place order",
     "items": {
       "challah": {
         "name": "Challah",
-        "description": "Traditional braided bread, perfect for Shabbat"
+        "description": "Traditional Jewish braided bread, symbol of Shabbat. Its golden crust and soft, slightly sweet interior make it perfect to accompany any meal.",
+        "features": ["Traditional", "Handmade", "Fresh daily"]
       },
       "bagels": {
         "name": "Bagels",
-        "description": "Authentic New York-style bagels"
+        "description": "Authentic New York style bagels, boiled and then baked to achieve that crispy outer texture and chewy interior.",
+        "features": ["NY Style", "Gluten-free available", "Various flavors"]
       },
       "rugelach": {
         "name": "Rugelach",
-        "description": "Rolls with chocolate, nuts or cinnamon"
+        "description": "Small puff pastry rolls with irresistible chocolate, cinnamon and nuts filling. A classic of Jewish celebrations.",
+        "features": ["Traditional", "Varied fillings", "Puff pastry"]
       },
       "babka": {
         "name": "Babka",
-        "description": "Sweet bread with chocolate swirl"
-      },
-      "knish": {
-        "name": "Potato Knish",
-        "description": "Pastry filled with mashed potatoes"
+        "description": "Braided, dense and moist bread, full of flavor. Our chocolate babka is a true work of art, with layers of soft dough and an intense chocolate swirl.",
+        "features": ["Intense chocolate", "Moist texture", "Artisanal"]
       },
       "hamentashen": {
         "name": "Hamentashen",
-        "description": "Triangular Purim cookies"
+        "description": "Triangle-shaped cookies, filled with different jams or poppy seeds. They are a symbol of the Purim holiday.",
+        "features": ["Traditional Purim", "Varied fillings", "Triangular shape"]
+      },
+      "knish": {
+        "name": "Potato Knish",
+        "description": "Baked dough bun, filled with mashed potatoes and onion. A hearty appetizer, ideal for a festive meal.",
+        "features": ["Hearty", "Gluten-free", "Creamy filling"]
+      },
+      "strudel": {
+        "name": "Strudel",
+        "description": "Rolled pastry with thin and crispy dough, traditionally filled with apples, cinnamon and raisins. A comforting autumn dessert.",
+        "features": ["Crispy dough", "Fresh apples", "Gluten-free"]
+      },
+      "brownie": {
+        "name": "Brownie",
+        "description": "Dense and moist chocolate cake, with an intense cocoa flavor. Available in gluten-free version.",
+        "features": ["Belgian chocolate", "Dense and moist", "Gluten-free"]
+      },
+      "tarta": {
+        "name": "Apple Pie",
+        "description": "A classic dessert with a generous filling of apple slices, cinnamon and sugar, covered with shortcrust pastry.",
+        "features": ["Classic", "Fresh apples", "Gluten-free"]
       }
     },
-    "glutenFree": "Gluten-free available"
+    "info": {
+      "kosher": {
+        "title": "Kosher Quality",
+        "description": "All our products follow strict kosher standards"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Same-day delivery for orders before 2:00 PM"
+      },
+      "fresh": {
+        "title": "Fresh Daily",
+        "description": "Made daily with fresh ingredients"
+      },
+      "traditional": {
+        "title": "Traditional Recipes",
+        "description": "Passed down from generation to generation"
+      }
+    }
   },
   "catering": {
     "title": "Catering Service",

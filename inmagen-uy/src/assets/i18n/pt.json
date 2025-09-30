@@ -9,7 +9,8 @@
     "products": "Produtos",
     "catering": "Catering",
     "contact": "Contato",
-    "careers": "Trabalhe Conosco"
+    "careers": "Trabalhe Conosco",
+    "cart": "Meu Pedido"
   },
   "home": {
     "title": "Bem-vindos à Inmagen.uy",
@@ -76,43 +77,128 @@
     "corporate": {
       "title": "Eventos Corporativos",
       "description": "Catering profissional para sua empresa. Cardápios executivos, serviço completo e logística integral."
+    },
+    "orders": {
+      "title": "Pedidos Personalizados",
+      "description": "Fabricação sob encomenda adaptada às suas necessidades específicas",
+      "details": "Criamos produtos personalizados de acordo com suas especificações exatas. Seja para um evento familiar, celebração religiosa ou simplesmente para desfrutar em casa, adaptamos nossas receitas tradicionais às suas preferências. Trabalhamos com ingredientes premium, respeitando as normas kosher e garantindo frescor em cada entrega.",
+      "features": ["Receitas personalizadas", "Ingredientes premium", "Entregas pontuais", "Adaptação kosher", "Pedidos a partir de 24h"]
+    },
+    "counter": {
+      "title": "Venda no Balcão",
+      "description": "Visite-nos e leve seus produtos favoritos frescos do dia",
+      "details": "Nossa loja em La Unión espera por você com uma ampla variedade de produtos frescos elaborados diariamente. Você pode ver, escolher e levar seus aperitivos judaicos favoritos na hora. Nossa equipe especializada te aconselhará sobre cada produto, seus ingredientes e as melhores formas de desfrutá-los. Horário: Seg-Sáb 11:00-22:00, Dom 11:00-18:00.",
+      "features": ["Produtos do dia", "Atendimento personalizado", "Assessoria especializada", "Sem esperas", "Variedade completa"]
+    },
+    "catering": {
+      "title": "Catering para Eventos",
+      "description": "Serviços profissionais para casamentos, bar mitzvá e eventos especiais",
+      "details": "Transformamos seus eventos em experiências gastronômicas inesquecíveis. Com mais de 10 anos de experiência em catering kosher, oferecemos serviços completos para casamentos, bar/bat mitzvá, brit milá, eventos corporativos e celebrações festivas judaicas. Inclui planejamento de cardápio, coordenação logística, equipe especializada e montagem completa.",
+      "features": ["Cardápios personalizados", "Coordenação completa", "Equipe capacitada", "Montagem incluída", "Certificação kosher"]
+    },
+    "process": {
+      "title": "Como Trabalhamos",
+      "step1": {
+        "title": "1. Consulta",
+        "description": "Conversamos sobre suas necessidades"
+      },
+      "step2": {
+        "title": "2. Proposta",
+        "description": "Projetamos a solução perfeita"
+      },
+      "step3": {
+        "title": "3. Produção",
+        "description": "Elaboramos com dedicação"
+      },
+      "step4": {
+        "title": "4. Entrega",
+        "description": "Entregamos com pontualidade"
+      }
     }
   },
   "products": {
     "title": "Nossos Produtos",
     "subtitle": "Aperitivos judaicos tradicionais elaborados com paixão",
+    "glutenFreeCount": "produtos disponíveis sem glúten",
     "categories": {
+      "all": "Todos",
       "breads": "Pães",
       "pastries": "Confeitaria",
       "sweets": "Doces"
     },
+    "glutenFree": "Sem Glúten",
+    "specialOffer": "Oferta Especial",
+    "specialOfferDesc": "20% de desconto em pedidos acima de $5000",
+    "addToCart": "Adicionar ao pedido",
+    "addedToCart": "adicionado ao pedido",
+    "viewCart": "Ver Carrinho",
+    "moreInfo": "Mais info",
+    "makeOrder": "Fazer pedido",
     "items": {
       "challah": {
         "name": "Challah",
-        "description": "Pão trançado tradicional, perfeito para Shabat"
+        "description": "Pão trançado judaico tradicional, símbolo do Shabat. Sua crosta dourada e interior macio e levemente doce o tornam perfeito para acompanhar qualquer refeição.",
+        "features": ["Tradicional", "Feito à mão", "Fresco do dia"]
       },
       "bagels": {
         "name": "Bagels",
-        "description": "Bagels autênticos ao estilo Nova York"
+        "description": "Bagels autênticos ao estilo de Nova York, fervidos e depois assados para conseguir aquela textura externa crocante e interior macio.",
+        "features": ["Estilo NY", "Sem glúten disponível", "Vários sabores"]
       },
       "rugelach": {
         "name": "Rugelach",
-        "description": "Rolinhos com chocolate, nozes ou canela"
+        "description": "Pequenos rolinhos de massa folhada com recheio irresistível de chocolate, canela e nozes. Um clássico das celebrações judaicas.",
+        "features": ["Tradicional", "Recheios variados", "Massa folhada"]
       },
       "babka": {
         "name": "Babka",
-        "description": "Pão doce com redemoinho de chocolate"
-      },
-      "knish": {
-        "name": "Knish de Batata",
-        "description": "Empada recheada com purê de batatas"
+        "description": "Pão trançado, denso e úmido, cheio de sabor. Nossa babka de chocolate é uma verdadeira obra de arte, com camadas de massa macia e um redemoinho intenso de chocolate.",
+        "features": ["Chocolate intenso", "Textura úmida", "Artesanal"]
       },
       "hamentashen": {
         "name": "Hamentashen",
-        "description": "Biscoitos triangulares de Purim"
+        "description": "Biscoitos em forma de triângulo, recheados com diferentes geleias ou sementes de papoula. São um símbolo da festa de Purim.",
+        "features": ["Tradicional de Purim", "Recheios variados", "Forma triangular"]
+      },
+      "knish": {
+        "name": "Knish de Batata",
+        "description": "Bolinho de massa assado, recheado com purê de batatas e cebola. Um aperitivo substancioso, ideal para uma refeição festiva.",
+        "features": ["Substancioso", "Sem glúten", "Recheio cremoso"]
+      },
+      "strudel": {
+        "name": "Strudel",
+        "description": "Pastel enrolado de massa fina e crocante, tradicionalmente recheado com maçãs, canela e passas. Uma sobremesa reconfortante de outono.",
+        "features": ["Massa crocante", "Maçãs frescas", "Sem glúten"]
+      },
+      "brownie": {
+        "name": "Brownie",
+        "description": "Bolo de chocolate denso e úmido, com um sabor intenso de cacau. Disponível em versão sem glúten.",
+        "features": ["Chocolate belga", "Denso e úmido", "Sem glúten"]
+      },
+      "tarta": {
+        "name": "Torta de Maçãs",
+        "description": "Uma sobremesa clássica com um recheio generoso de fatias de maçã, canela e açúcar, coberta com massa quebrada.",
+        "features": ["Clássico", "Maçãs frescas", "Sem glúten"]
       }
     },
-    "glutenFree": "Disponível sem glúten"
+    "info": {
+      "kosher": {
+        "title": "Qualidade Kosher",
+        "description": "Todos os nossos produtos seguem as rigorosas normas kosher"
+      },
+      "delivery": {
+        "title": "Entrega Rápida",
+        "description": "Entrega no mesmo dia para pedidos antes das 14:00"
+      },
+      "fresh": {
+        "title": "Frescos Diariamente",
+        "description": "Elaborados diariamente com ingredientes frescos"
+      },
+      "traditional": {
+        "title": "Receitas Tradicionais",
+        "description": "Transmitidas de geração em geração"
+      }
+    }
   },
   "catering": {
     "title": "Serviço de Catering",
