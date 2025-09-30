@@ -86,6 +86,9 @@ export class LayoutComponent {
   }
 
   onMenuItemClick(): void {
+    // Scroll al top de la página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     // Cerrar el sidenav en móvil después de seleccionar un item
     if (this.isMobile) {
       this.sidenavOpened = false;
