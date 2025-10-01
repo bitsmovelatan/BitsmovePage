@@ -135,50 +135,60 @@
     "moreInfo": "Mais info",
     "makeOrder": "Fazer pedido",
     "items": {
-      "challah": {
-        "name": "Challah",
-        "description": "Pão trançado judaico tradicional, símbolo do Shabat. Sua crosta dourada e interior macio e levemente doce o tornam perfeito para acompanhar qualquer refeição.",
-        "features": ["Tradicional", "Feito à mão", "Fresco do dia"]
+      "brownie": {
+        "name": "Brownie",
+        "description": "Bolo de chocolate denso e úmido com sabor intenso de cacau. Perfeito para amantes de chocolate.",
+        "features": ["Chocolate belga", "Denso e úmido", "Artesanal"]
       },
-      "bagels": {
-        "name": "Bagels",
-        "description": "Bagels autênticos ao estilo de Nova York, fervidos e depois assados para conseguir aquela textura externa crocante e interior macio.",
-        "features": ["Estilo NY", "Sem glúten disponível", "Vários sabores"]
-      },
-      "rugelach": {
-        "name": "Rugelach",
-        "description": "Pequenos rolinhos de massa folhada com recheio irresistível de chocolate, canela e nozes. Um clássico das celebrações judaicas.",
-        "features": ["Tradicional", "Recheios variados", "Massa folhada"]
-      },
-      "babka": {
-        "name": "Babka",
-        "description": "Pão trançado, denso e úmido, cheio de sabor. Nossa babka de chocolate é uma verdadeira obra de arte, com camadas de massa macia e um redemoinho intenso de chocolate.",
-        "features": ["Chocolate intenso", "Textura úmida", "Artesanal"]
-      },
-      "hamentashen": {
-        "name": "Hamentashen",
-        "description": "Biscoitos em forma de triângulo, recheados com diferentes geleias ou sementes de papoula. São um símbolo da festa de Purim.",
-        "features": ["Tradicional de Purim", "Recheios variados", "Forma triangular"]
+      "cookies": {
+        "name": "Cookies",
+        "description": "Biscoitos crocantes com pedaços de chocolate, nozes ou passas. Feitos com receita tradicional judaica.",
+        "features": ["Crocantes", "Vários sabores", "Frescos"]
       },
       "knish": {
         "name": "Knish de Batata",
-        "description": "Bolinho de massa assado, recheado com purê de batatas e cebola. Um aperitivo substancioso, ideal para uma refeição festiva.",
-        "features": ["Substancioso", "Sem glúten", "Recheio cremoso"]
+        "description": "Bolinho de massa assado, recheado com purê de batatas e cebola. Um aperitivo substancioso, ideal para refeições festivas.",
+        "features": ["Substancioso", "Recheio cremoso", "Tradicional"]
+      },
+      "masita": {
+        "name": "Masita",
+        "description": "Pequenos biscoitos decorados e saborizados, perfeitos para acompanhar chá ou café. Variedade de sabores e formas.",
+        "features": ["Decorados", "Vários sabores", "Ideais para chá"]
+      },
+      "pionono": {
+        "name": "Pionono",
+        "description": "Pão de ló fino e flexível, enrolado com doce de leite ou creme. Um clássico da confeitaria judaica.",
+        "features": ["Recheio cremoso", "Macio", "Tradicional"]
+      },
+      "pletzalaj": {
+        "name": "Pletzalaj",
+        "description": "Pão achatado e redondo, polvilhado com cebola desidratada e sementes de papoula. Clássico da padaria judaica.",
+        "features": ["Pão achatado", "Cebola e papoula", "Tradicional"]
+      },
+      "pletzalaj_rellena": {
+        "name": "Pletzalaj Recheado",
+        "description": "Variante do pletzalaj com recheio de cebola, batata ou queijo. Mais substancioso e saboroso.",
+        "features": ["Recheado", "Vários recheios", "Saboroso"]
+      },
+      "rol_canela": {
+        "name": "Rolo de Canela",
+        "description": "Pão doce enrolado com açúcar, canela e manteiga. Macio e aromático, perfeito para o café da manhã.",
+        "features": ["Doce", "Aromático", "Macio"]
       },
       "strudel": {
         "name": "Strudel",
-        "description": "Pastel enrolado de massa fina e crocante, tradicionalmente recheado com maçãs, canela e passas. Uma sobremesa reconfortante de outono.",
-        "features": ["Massa crocante", "Maçãs frescas", "Sem glúten"]
+        "description": "Pastel enrolado de massa fina e crocante, tradicionalmente recheado com maçãs, canela e passas. Uma sobremesa reconfortante.",
+        "features": ["Massa crocante", "Maçãs frescas", "Tradicional"]
       },
-      "brownie": {
-        "name": "Brownie",
-        "description": "Bolo de chocolate denso e úmido, com um sabor intenso de cacau. Disponível em versão sem glúten.",
-        "features": ["Chocolate belga", "Denso e úmido", "Sem glúten"]
+      "tarta_manzana": {
+        "name": "Torta de Maçã",
+        "description": "Uma sobremesa clássica com recheio generoso de fatias de maçã, canela e açúcar, coberta com massa quebrada.",
+        "features": ["Clássica", "Maçãs frescas", "Caseira"]
       },
-      "tarta": {
-        "name": "Torta de Maçãs",
-        "description": "Uma sobremesa clássica com um recheio generoso de fatias de maçã, canela e açúcar, coberta com massa quebrada.",
-        "features": ["Clássico", "Maçãs frescas", "Sem glúten"]
+      "trigona_puerro": {
+        "name": "Trigona de Alho-poró",
+        "description": "Pastel triangular de massa filo recheado com alho-poró e queijo. Aperitivo salgado perfeito para qualquer ocasião.",
+        "features": ["Triangular", "Recheio salgado", "Massa filo"]
       }
     },
     "info": {

@@ -119,50 +119,60 @@
     "moreInfo": "More info",
     "makeOrder": "Place order",
     "items": {
-      "challah": {
-        "name": "Challah",
-        "description": "Traditional Jewish braided bread, symbol of Shabbat. Its golden crust and soft, slightly sweet interior make it perfect to accompany any meal.",
-        "features": ["Traditional", "Handmade", "Fresh daily"]
+      "brownie": {
+        "name": "Brownie",
+        "description": "Dense and moist chocolate cake with intense cocoa flavor. Perfect for chocolate lovers.",
+        "features": ["Belgian chocolate", "Dense and moist", "Artisanal"]
       },
-      "bagels": {
-        "name": "Bagels",
-        "description": "Authentic New York style bagels, boiled and then baked to achieve that crispy outer texture and chewy interior.",
-        "features": ["NY Style", "Gluten-free available", "Various flavors"]
-      },
-      "rugelach": {
-        "name": "Rugelach",
-        "description": "Small puff pastry rolls with irresistible chocolate, cinnamon and nuts filling. A classic of Jewish celebrations.",
-        "features": ["Traditional", "Varied fillings", "Puff pastry"]
-      },
-      "babka": {
-        "name": "Babka",
-        "description": "Braided, dense and moist bread, full of flavor. Our chocolate babka is a true work of art, with layers of soft dough and an intense chocolate swirl.",
-        "features": ["Intense chocolate", "Moist texture", "Artisanal"]
-      },
-      "hamentashen": {
-        "name": "Hamentashen",
-        "description": "Triangle-shaped cookies, filled with different jams or poppy seeds. They are a symbol of the Purim holiday.",
-        "features": ["Traditional Purim", "Varied fillings", "Triangular shape"]
+      "cookies": {
+        "name": "Cookies",
+        "description": "Crispy cookies with chocolate chips, nuts or raisins. Made with traditional Jewish recipe.",
+        "features": ["Crispy", "Various flavors", "Fresh"]
       },
       "knish": {
         "name": "Potato Knish",
-        "description": "Baked dough bun, filled with mashed potatoes and onion. A hearty appetizer, ideal for a festive meal.",
-        "features": ["Hearty", "Gluten-free", "Creamy filling"]
+        "description": "Baked dough bun filled with mashed potatoes and onion. A hearty appetizer, ideal for festive meals.",
+        "features": ["Hearty", "Creamy filling", "Traditional"]
+      },
+      "masita": {
+        "name": "Masita",
+        "description": "Small decorated and flavored cookies, perfect to accompany tea or coffee. Variety of flavors and shapes.",
+        "features": ["Decorated", "Various flavors", "Ideal for tea"]
+      },
+      "pionono": {
+        "name": "Pionono",
+        "description": "Thin and flexible sponge cake, rolled with dulce de leche or cream. A classic of Jewish pastry.",
+        "features": ["Creamy filling", "Soft", "Traditional"]
+      },
+      "pletzalaj": {
+        "name": "Pletzalaj",
+        "description": "Flat and round bread, sprinkled with dehydrated onion and poppy seeds. Classic of Jewish bakery.",
+        "features": ["Flat bread", "Onion and poppy", "Traditional"]
+      },
+      "pletzalaj_rellena": {
+        "name": "Filled Pletzalaj",
+        "description": "Variant of pletzalaj with onion, potato or cheese filling. More substantial and flavorful.",
+        "features": ["Filled", "Various fillings", "Tasty"]
+      },
+      "rol_canela": {
+        "name": "Cinnamon Roll",
+        "description": "Sweet bread rolled with sugar, cinnamon and butter. Soft and aromatic, perfect for breakfast.",
+        "features": ["Sweet", "Aromatic", "Soft"]
       },
       "strudel": {
         "name": "Strudel",
-        "description": "Rolled pastry with thin and crispy dough, traditionally filled with apples, cinnamon and raisins. A comforting autumn dessert.",
-        "features": ["Crispy dough", "Fresh apples", "Gluten-free"]
+        "description": "Rolled pastry with thin and crispy dough, traditionally filled with apples, cinnamon and raisins. A comforting dessert.",
+        "features": ["Crispy dough", "Fresh apples", "Traditional"]
       },
-      "brownie": {
-        "name": "Brownie",
-        "description": "Dense and moist chocolate cake, with an intense cocoa flavor. Available in gluten-free version.",
-        "features": ["Belgian chocolate", "Dense and moist", "Gluten-free"]
+      "tarta_manzana": {
+        "name": "Apple Tart",
+        "description": "A classic dessert with generous filling of apple slices, cinnamon and sugar, covered with shortcrust pastry.",
+        "features": ["Classic", "Fresh apples", "Homemade"]
       },
-      "tarta": {
-        "name": "Apple Pie",
-        "description": "A classic dessert with a generous filling of apple slices, cinnamon and sugar, covered with shortcrust pastry.",
-        "features": ["Classic", "Fresh apples", "Gluten-free"]
+      "trigona_puerro": {
+        "name": "Leek Trigona",
+        "description": "Triangular phyllo pastry filled with leek and cheese. Perfect savory appetizer for any occasion.",
+        "features": ["Triangular", "Savory filling", "Phyllo dough"]
       }
     },
     "info": {

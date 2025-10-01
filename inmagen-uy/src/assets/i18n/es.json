@@ -78,50 +78,60 @@
     "moreInfo": "Más info",
     "makeOrder": "Hacer pedido",
     "items": {
-      "challah": {
-        "name": "Challah",
-        "description": "Pan trenzado tradicional judío, símbolo del Shabbat. Su corteza dorada y su interior suave y ligeramente dulce lo hacen perfecto para acompañar cualquier comida.",
-        "features": ["Tradicional", "Hecho a mano", "Fresco del día"]
+      "brownie": {
+        "name": "Brownie",
+        "description": "Pastel de chocolate denso y húmedo, con un sabor intenso a cacao. Perfecto para los amantes del chocolate.",
+        "features": ["Chocolate belga", "Denso y húmedo", "Artesanal"]
       },
-      "bagels": {
-        "name": "Bagels",
-        "description": "Auténticos bagels al estilo de Nueva York, hervidos y luego horneados para conseguir esa textura exterior crujiente y un interior masticable.",
-        "features": ["Estilo NY", "Sin gluten disponible", "Varios sabores"]
-      },
-      "rugelach": {
-        "name": "Rugelach",
-        "description": "Pequeños rollos de masa hojaldrada con relleno irresistible de chocolate, canela y nueces. Un clásico de las celebraciones judías.",
-        "features": ["Tradicional", "Rellenos variados", "Hojaldrado"]
-      },
-      "babka": {
-        "name": "Babka",
-        "description": "Pan trenzado, denso y húmedo, lleno de sabor. Nuestro babka de chocolate es una verdadera obra de arte, con capas de masa suave y un remolino de chocolate intenso.",
-        "features": ["Chocolate intenso", "Textura húmeda", "Artesanal"]
-      },
-      "hamentashen": {
-        "name": "Hamentashen",
-        "description": "Galletas con forma de triángulo, rellenas de diferentes mermeladas o semillas de amapola. Son un símbolo de la fiesta de Purim.",
-        "features": ["Tradicional de Purim", "Rellenos variados", "Forma triangular"]
+      "cookies": {
+        "name": "Cookies",
+        "description": "Galletas crujientes con trozos de chocolate, nueces o pasas. Hechas con receta tradicional judía.",
+        "features": ["Crujientes", "Varios sabores", "Frescas"]
       },
       "knish": {
         "name": "Knish de Papa",
         "description": "Bollo de masa horneada, relleno de puré de papas y cebolla. Un aperitivo sustancioso, ideal para una comida festiva.",
-        "features": ["Sustancioso", "Sin gluten", "Relleno cremoso"]
+        "features": ["Sustancioso", "Relleno cremoso", "Tradicional"]
+      },
+      "masita": {
+        "name": "Masita",
+        "description": "Pequeñas galletas decoradas y saborizadas, perfectas para acompañar el té o café. Variedad de sabores y formas.",
+        "features": ["Decoradas", "Varios sabores", "Ideales para el té"]
+      },
+      "pionono": {
+        "name": "Pionono",
+        "description": "Bizcocho fino y flexible, enrollado con dulce de leche o crema. Un clásico de la repostería judía.",
+        "features": ["Relleno cremoso", "Suave", "Tradicional"]
+      },
+      "pletzalaj": {
+        "name": "Pletzalaj",
+        "description": "Pan plano y redondo, espolvoreado con cebolla deshidratada y semillas de amapola. Clásico de la panadería judía.",
+        "features": ["Pan plano", "Cebolla y amapola", "Tradicional"]
+      },
+      "pletzalaj_rellena": {
+        "name": "Pletzalaj Rellena",
+        "description": "Variante del pletzalaj con relleno de cebolla, papa o queso. Más sustanciosa y sabrosa.",
+        "features": ["Rellena", "Varios rellenos", "Sabrosa"]
+      },
+      "rol_canela": {
+        "name": "Rol de Canela",
+        "description": "Pan dulce enrollado con azúcar, canela y mantequilla. Suave y aromático, perfecto para el desayuno.",
+        "features": ["Dulce", "Aromático", "Suave"]
       },
       "strudel": {
         "name": "Strudel",
-        "description": "Pastel enrollado de masa fina y crujiente, tradicionalmente relleno de manzanas, canela y pasas. Un postre reconfortante de otoño.",
-        "features": ["Masa crujiente", "Manzanas frescas", "Sin gluten"]
+        "description": "Pastel enrollado de masa fina y crujiente, tradicionalmente relleno de manzanas, canela y pasas. Un postre reconfortante.",
+        "features": ["Masa crujiente", "Manzanas frescas", "Tradicional"]
       },
-      "brownie": {
-        "name": "Brownie",
-        "description": "Pastel de chocolate denso y húmedo, con un sabor intenso a cacao. Disponible en versión sin gluten.",
-        "features": ["Chocolate belga", "Denso y húmedo", "Sin gluten"]
-      },
-      "tarta": {
-        "name": "Tarta de Manzanas",
+      "tarta_manzana": {
+        "name": "Tarta de Manzana",
         "description": "Un postre clásico con un relleno generoso de rodajas de manzana, canela y azúcar, cubierto con masa quebrada.",
-        "features": ["Clásico", "Manzanas frescas", "Sin gluten"]
+        "features": ["Clásica", "Manzanas frescas", "Casera"]
+      },
+      "trigona_puerro": {
+        "name": "Trigona de Puerro",
+        "description": "Pastel triangular de masa filo relleno de puerro y queso. Aperitivo salado perfecto para cualquier ocasión.",
+        "features": ["Triangular", "Relleno salado", "Masa filo"]
       }
     },
     "info": {

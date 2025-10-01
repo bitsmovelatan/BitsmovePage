@@ -38,67 +38,81 @@ export class ProductsComponent {
   
   productKeys = [
     {
-      key: 'challah',
+      key: 'brownie',
       glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80',
-      category: 'breads',
-      price: '$450'
+      imageUrl: 'https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=800&q=80',
+      category: 'sweets',
+      price: '$990'
     },
     {
-      key: 'bagels',
-      glutenFree: true,
-      imageUrl: 'https://images.unsplash.com/photo-1551106652-a5bcf4b29e84?w=800&q=80',
-      category: 'breads',
-      price: '$380'
-    },
-    {
-      key: 'rugelach',
+      key: 'cookies',
       glutenFree: false,
       imageUrl: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80',
       category: 'sweets',
-      price: '$520'
-    },
-    {
-      key: 'babka',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=800&q=80',
-      category: 'pastries',
-      price: '$680'
-    },
-    {
-      key: 'hamentashen',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80',
-      category: 'sweets',
-      price: '$420'
+      price: '$40'
     },
     {
       key: 'knish',
-      glutenFree: true,
+      glutenFree: false,
       imageUrl: 'https://images.unsplash.com/photo-1568471173248-eb9aba2f5e77?w=800&q=80',
       category: 'pastries',
-      price: '$350'
+      price: '$42'
+    },
+    {
+      key: 'masita',
+      glutenFree: false,
+      imageUrl: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800&q=80',
+      category: 'sweets',
+      price: '$990'
+    },
+    {
+      key: 'pionono',
+      glutenFree: false,
+      imageUrl: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+      category: 'pastries',
+      price: '$990'
+    },
+    {
+      key: 'pletzalaj',
+      glutenFree: false,
+      imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80',
+      category: 'breads',
+      price: '$25'
+    },
+    {
+      key: 'pletzalaj_rellena',
+      glutenFree: false,
+      imageUrl: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80',
+      category: 'breads',
+      price: '$65'
+    },
+    {
+      key: 'rol_canela',
+      glutenFree: false,
+      imageUrl: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=80',
+      category: 'pastries',
+      price: '$100'
     },
     {
       key: 'strudel',
-      glutenFree: true,
+      glutenFree: false,
       imageUrl: 'https://images.unsplash.com/photo-1587241321921-91a834d6d191?w=800&q=80',
       category: 'pastries',
-      price: '$590'
+      price: '$650'
     },
     {
-      key: 'brownie',
-      glutenFree: true,
-      imageUrl: 'https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=800&q=80',
-      category: 'sweets',
-      price: '$380'
-    },
-    {
-      key: 'tarta',
-      glutenFree: true,
+      key: 'tarta_manzana',
+      glutenFree: false,
       imageUrl: 'https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=800&q=80',
       category: 'pastries',
-      price: '$750'
+      price: '$650'
+    },
+    {
+      key: 'trigona_puerro',
+      glutenFree: false,
+      imageUrl: 'https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=800&q=80',
+      category: 'pastries',
+      price: '$42'
     }
   ];
 
