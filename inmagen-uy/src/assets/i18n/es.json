@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Inmagen.uy",
+    "title": "InMagen",
     "subtitle": "Tradición y Sabor Judío"
   },
   "nav": {
@@ -13,11 +13,11 @@
     "cart": "Mi Pedido"
   },
   "home": {
-    "title": "Bienvenidos a Inmagen.uy",
+    "title": "Bienvenidos a InMagen",
     "subtitle": "Descubre la auténtica cocina judía",
-    "description": "En Inmagen.uy nos enorgullece ofrecer una experiencia culinaria única con nuestros aperitivos judíos. Cada receta es un tributo a la tradición, elaborada con ingredientes frescos y el cuidado de las manos expertas. Desde la dulzura de un Rugelach hasta la calidez de un Challah recién horneado, te invitamos a explorar un mundo de sabores que enriquecerán tus momentos más especiales. Además, pensando en todas las necesidades, hemos adaptado una selección de nuestros clásicos para que también los disfrutes en su versión sin gluten.",
+    "description": "En InMagen nos enorgullece ofrecer una experiencia culinaria única con nuestros aperitivos judíos. Cada receta es un tributo a la tradición, elaborada con ingredientes frescos y el cuidado de las manos expertas. Desde la dulzura de un Rugelach hasta la calidez de un Challah recién horneado, te invitamos a explorar un mundo de sabores que enriquecerán tus momentos más especiales. Además, pensando en todas las necesidades, hemos adaptado una selección de nuestros clásicos para que también los disfrutes en su versión sin gluten.",
     "features": {
-      "title": "¿Por qué elegir Inmagen?",
+      "title": "¿Por qué elegir InMagen?",
       "quality": {
         "title": "Calidad Premium",
         "description": "Ingredientes frescos y recetas tradicionales transmitidas por generaciones"

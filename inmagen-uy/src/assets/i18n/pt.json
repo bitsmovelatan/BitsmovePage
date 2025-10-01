@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Inmagen.uy",
+    "title": "InMagen",
     "subtitle": "Tradição e Sabor Judaico"
   },
   "nav": {
@@ -13,11 +13,11 @@
     "cart": "Meu Pedido"
   },
   "home": {
-    "title": "Bem-vindos à Inmagen.uy",
+    "title": "Bem-vindos à InMagen",
     "subtitle": "Descubra a autêntica cozinha judaica",
-    "description": "Na Inmagen.uy, temos orgulho em oferecer uma experiência culinária única com os nossos aperitivos judaicos. Cada receita é um tributo à tradição, elaborada com ingredientes frescos e o cuidado de mãos experientes. Desde a doçura de um Rugelach até o calor de um Challah recém-assado, convidamo-lo a explorar um mundo de sabores que enriquecerão os seus momentos mais especiais. Além disso, pensando em todas as necessidades, adaptámos uma seleção dos nossos clássicos para que também os desfrute na sua versão sem glúten.",
+    "description": "Na InMagen, temos orgulho em oferecer uma experiência culinária única com os nossos aperitivos judaicos. Cada receita é um tributo à tradição, elaborada com ingredientes frescos e o cuidado de mãos experientes. Desde a doçura de um Rugelach até o calor de um Challah recém-assado, convidamo-lo a explorar um mundo de sabores que enriquecerão os seus momentos mais especiais. Além disso, pensando em todas as necessidades, adaptámos uma seleção dos nossos clássicos para que também os desfrute na sua versão sem glúten.",
     "features": {
-      "title": "Por que escolher Inmagen?",
+      "title": "Por que escolher InMagen?",
       "quality": {
         "title": "Qualidade Premium",
         "description": "Ingredientes frescos e receitas tradicionais transmitidas por gerações"
@@ -357,7 +357,7 @@
       "position": "Posição de interesse",
       "availability": "Disponibilidade",
       "experience": "Experiência profissional relevante",
-      "motivation": "Motivação para se juntar à Inmagen.uy",
+      "motivation": "Motivação para se juntar à InMagen SAS",
       "cv": "Anexar CV",
       "message": "Mensagem",
       "submit": "Enviar Candidatura",
@@ -366,7 +366,7 @@
     }
   },
   "footer": {
-    "rights": "© 2024 Inmagen.uy. Todos os direitos reservados.",
+    "rights": "© 2024 InMagen SAS Todos os direitos reservados.",
     "social": "Siga-nos nas redes sociais"
   }
 }

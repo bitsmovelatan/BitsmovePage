@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Inmagen.uy",
+    "title": "InMagen",
     "subtitle": "Jewish Tradition and Flavor"
   },
   "nav": {
@@ -13,11 +13,11 @@
     "cart": "My Order"
   },
   "home": {
-    "title": "Welcome to Inmagen.uy",
+    "title": "Welcome to InMagen",
     "subtitle": "Discover authentic Jewish cuisine",
-    "description": "At Inmagen.uy, we are proud to offer a unique culinary experience with our Jewish appetizers. Each recipe is a tribute to tradition, crafted with fresh ingredients and the care of expert hands. From the sweetness of a Rugelach to the warmth of a freshly baked Challah, we invite you to explore a world of flavors that will enrich your most special moments. Furthermore, with all needs in mind, we have adapted a selection of our classics so you can also enjoy them in their gluten-free version.",
+    "description": "At InMagen, we are proud to offer a unique culinary experience with our Jewish appetizers. Each recipe is a tribute to tradition, crafted with fresh ingredients and the care of expert hands. From the sweetness of a Rugelach to the warmth of a freshly baked Challah, we invite you to explore a world of flavors that will enrich your most special moments. Furthermore, with all needs in mind, we have adapted a selection of our classics so you can also enjoy them in their gluten-free version.",
     "features": {
-      "title": "Why choose Inmagen?",
+      "title": "Why choose InMagen?",
       "quality": {
         "title": "Premium Quality",
         "description": "Fresh ingredients and traditional recipes passed down through generations"
@@ -260,7 +260,7 @@
         "sundayTime": "11:00 AM - 6:00 PM"
       }
     },
-    "whatsappMessage": "Hello! I would like to get more information about Inmagen products",
+    "whatsappMessage": "Hello! I would like to get more information about InMagen products",
     "form": {
       "name": "Full name",
       "namePlaceholder": "John Doe",
