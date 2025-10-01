@@ -1,4 +1,37 @@
 <div class="home-container">
+  <!-- Product Carousel -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <button mat-icon-button class="carousel-nav prev" (click)="previousSlide()" [disabled]="currentSlide === 0">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      
+      <div class="carousel-track-container">
+        <div class="carousel-track" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+          @for (product of carouselProducts; track product.key; let i = $index) {
+            <div class="carousel-slide">
+              <img [src]="product.imageUrl" [alt]="getProductName(product.key)" class="carousel-image">
+              <div class="carousel-overlay">
+                <h3>{{ getProductName(product.key) }}</h3>
+                <p class="product-price">{{ product.price }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      
+      <button mat-icon-button class="carousel-nav next" (click)="nextSlide()" [disabled]="currentSlide === carouselProducts.length - 1">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+    
+    <div class="carousel-indicators">
+      @for (product of carouselProducts; track product.key; let i = $index) {
+        <button class="indicator" [class.active]="i === currentSlide" (click)="goToSlide(i)"></button>
+      }
+    </div>
+  </section>
+
   <!-- Hero Section -->
   <section class="hero">
     <h1 class="hero-title">{{ t('home.title') }}</h1>
