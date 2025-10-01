@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TranslationService } from '../../services/translation';
 import { Router } from '@angular/router';
+import { PageNavigation } from '../../shared/page-navigation/page-navigation';
 
 @Component({
   selector: 'app-services',
@@ -14,7 +15,8 @@ import { Router } from '@angular/router';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    PageNavigation
   ],
   templateUrl: './services.html',
   styleUrl: './services.scss'

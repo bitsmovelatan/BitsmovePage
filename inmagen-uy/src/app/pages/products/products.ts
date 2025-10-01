@@ -8,6 +8,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { TranslationService } from '../../services/translation';
 import { CartService } from '../../services/cart';
+import { PageNavigation } from '../../shared/page-navigation/page-navigation';
 
 interface Product {
   name: string;
@@ -28,7 +29,8 @@ interface Product {
     MatIconModule,
     MatChipsModule,
     MatTabsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    PageNavigation
   ],
   templateUrl: './products.html',
   styleUrl: './products.scss'

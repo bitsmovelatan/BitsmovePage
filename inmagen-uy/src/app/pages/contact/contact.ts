@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { TranslationService } from '../../services/translation';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { PageNavigation } from '../../shared/page-navigation/page-navigation';
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +24,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    MatDividerModule
+    MatDividerModule,
+    PageNavigation
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'

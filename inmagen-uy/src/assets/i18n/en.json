@@ -12,6 +12,10 @@
     "careers": "Work with Us",
     "cart": "My Order"
   },
+  "navigation": {
+    "previous": "Previous",
+    "next": "Next"
+  },
   "home": {
     "title": "Welcome to InMagen",
     "subtitle": "Discover authentic Jewish cuisine",
@@ -341,7 +345,7 @@
       "position": "Position of interest",
       "availability": "Availability",
       "experience": "Relevant work experience",
-      "motivation": "Motivation to join Inmagen.uy",
+      "motivation": "Motivation to join InMagen SAS",
       "cv": "Attach CV",
       "message": "Message",
       "submit": "Submit Application",
@@ -350,7 +354,7 @@
     }
   },
   "footer": {
-    "rights": "© 2024 Inmagen.uy. All rights reserved.",
+    "rights": "© 2024 InMagen SAS All rights reserved.",
     "social": "Follow us on social media"
   }
 }

@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatChipsModule } from '@angular/material/chips';
 import { TranslationService } from '../../services/translation';
+import { PageNavigation } from '../../shared/page-navigation/page-navigation';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -24,7 +25,8 @@ import { HttpClient } from '@angular/common/http';
     MatFormFieldModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatChipsModule
+    MatChipsModule,
+    PageNavigation
   ],
   templateUrl: './careers.html',
   styleUrl: './careers.scss'

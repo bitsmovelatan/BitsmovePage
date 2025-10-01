@@ -13,6 +13,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TranslationService } from '../../services/translation';
+import { PageNavigation } from '../../shared/page-navigation/page-navigation';
 
 @Component({
   selector: 'app-catering',
@@ -29,7 +30,8 @@ import { TranslationService } from '../../services/translation';
     MatNativeDateModule,
     MatSnackBarModule,
     MatChipsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    PageNavigation
   ],
   templateUrl: './catering.html',
   styleUrl: './catering.scss'

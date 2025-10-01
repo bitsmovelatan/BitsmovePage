@@ -12,6 +12,10 @@
     "careers": "Trabalhe Conosco",
     "cart": "Meu Pedido"
   },
+  "navigation": {
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
   "home": {
     "title": "Bem-vindos à InMagen",
     "subtitle": "Descubra a autêntica cozinha judaica",

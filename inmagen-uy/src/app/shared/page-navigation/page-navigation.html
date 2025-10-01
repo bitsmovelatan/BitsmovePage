@@ -1,0 +1,25 @@
+<div class="page-navigation">
+  @if (navigation.previous) {
+    <button mat-stroked-button (click)="navigateTo(navigation.previous.path)" class="nav-button prev-button">
+      <mat-icon>arrow_back</mat-icon>
+      <span class="nav-label">
+        <span class="nav-type">{{ t('navigation.previous') }}</span>
+        <span class="nav-page">{{ t(navigation.previous.labelKey) }}</span>
+      </span>
+    </button>
+  } @else {
+    <div></div>
+  }
+  
+  @if (navigation.next) {
+    <button mat-stroked-button (click)="navigateTo(navigation.next.path)" class="nav-button next-button">
+      <span class="nav-label">
+        <span class="nav-type">{{ t('navigation.next') }}</span>
+        <span class="nav-page">{{ t(navigation.next.labelKey) }}</span>
+      </span>
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  } @else {
+    <div></div>
+  }
+</div>
