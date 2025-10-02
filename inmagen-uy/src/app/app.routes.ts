@@ -7,7 +7,7 @@ import { CateringComponent } from './pages/catering/catering';
 import { ContactComponent } from './pages/contact/contact';
 import { CareersComponent } from './pages/careers/careers';
 import { CartComponent } from './pages/cart/cart';
-
+import { PedidoRapidoComponent } from './pages/pedido-rapido/pedido-rapido.component';
 export const routes: Routes = [
   {
     path: '',
@@ -20,6 +20,7 @@ export const routes: Routes = [
       { path: 'contact', component: ContactComponent },
       { path: 'careers', component: CareersComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'pedido-gemini', component: PedidoRapidoComponent },
       { path: '**', redirectTo: '' }
     ]
   }
