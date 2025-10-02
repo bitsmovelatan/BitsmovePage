@@ -1,30 +1,161 @@
 <div class="pedido-rapido-container">
-    <h2>Asistente Rápido de Pedidos de Comida Judía ✡️</h2>
-    
-    <p>Escribe tu pedido con tus propias palabras (ej: "quiero dos knishes y una porción de borscht sin crema agria").</p>
-    
+  <div class="page-header">
+    <h2>🤖 Asistente Rápido de Pedidos con IA</h2>
+    <p>Escribe tu pedido con tus propias palabras y déjanos procesar lo que necesitas</p>
+  </div>
+  
+  <!-- Formulario de entrada -->
+  <div class="input-section" *ngIf="!mostrarResultados">
     <textarea 
       [(ngModel)]="textoUsuario" 
       rows="5" 
-      placeholder="Escribe tu pedido aquí..."
+      placeholder="Ejemplo: 'quiero dos knishes, un brownie y tres galletas'"
       [disabled]="cargando"
+      class="pedido-textarea"
     ></textarea>
     
     <button 
       (click)="procesarTexto()" 
       [disabled]="cargando || !textoUsuario.trim()"
       class="btn-primary">
-      {{ cargando ? 'Convirtiendo con Gemini...' : 'Convertir y Sugerir Pedido' }}
+      <mat-icon *ngIf="cargando">hourglass_empty</mat-icon>
+      {{ cargando ? 'Procesando con Gemini AI...' : '🚀 Procesar Pedido con IA' }}
     </button>
   
-    <p *ngIf="error" class="error-message">❌ {{ error }}</p>
-  
-    <div *ngIf="pedidoProcesado && !cargando" class="resultado">
-      <h3>✅ Pedido Estructurado (Revisa y Confirma):</h3>
-      <ul>
-        <li *ngFor="let item of pedidoProcesado">
-          **{{ item.cantidad }}x {{ item.nombreProducto }}** <span *ngIf="item.notas" class="nota-item"> (Nota: {{ item.notas }})</span>
-        </li>
-      </ul>
-      </div>
+    <p *ngIf="error" class="error-message">
+      <mat-icon>error_outline</mat-icon>
+      {{ error }}
+    </p>
   </div>
+
+  <!-- Resultados de validación -->
+  <div class="resultados-section" *ngIf="mostrarResultados && !cargando">
+    <div class="resultados-header">
+      <h3>
+        <mat-icon>checklist</mat-icon>
+        Productos Identificados
+      </h3>
+      <button class="btn-secondary" (click)="nuevoPedido()">
+        <mat-icon>refresh</mat-icon>
+        Nuevo Pedido
+      </button>
+    </div>
+
+    <!-- Lista de productos validados -->
+    <div class="productos-lista">
+      <div 
+        *ngFor="let vp of productosValidados" 
+        class="producto-card"
+        [class.validated]="vp.validation.found"
+        [class.not-found]="!vp.validation.found"
+        [class.added]="vp.addedToCart">
+        
+        <!-- Producto encontrado -->
+        <div class="producto-content" *ngIf="vp.validation.found && vp.validation.product">
+          <div class="producto-image">
+            <img [src]="vp.validation.product.imageUrl" [alt]="vp.validation.product.name">
+            <div class="similarity-badge" [class]="getSimilarityClass(vp.validation.similarity)">
+              <mat-icon>{{ getSimilarityIcon(vp.validation.similarity) }}</mat-icon>
+            </div>
+          </div>
+
+          <div class="producto-info">
+            <div class="producto-header">
+              <h4>{{ vp.validation.product.name }}</h4>
+              <span class="precio">{{ vp.validation.product.price }}</span>
+            </div>
+            
+            <p class="producto-descripcion">{{ vp.validation.product.description }}</p>
+            
+            <div class="producto-meta">
+              <span class="cantidad-badge">
+                <mat-icon>shopping_basket</mat-icon>
+                Cantidad: {{ vp.original.cantidad }}
+              </span>
+              <span class="categoria-badge">{{ vp.validation.product.category }}</span>
+              <span *ngIf="vp.validation.product.glutenFree" class="gluten-free-badge">
+                <mat-icon>check_circle</mat-icon>
+                Sin Gluten
+              </span>
+            </div>
+
+            <p class="notas" *ngIf="vp.original.notas">
+              <mat-icon>note</mat-icon>
+              <strong>Nota:</strong> {{ vp.original.notas }}
+            </p>
+
+            <div class="similarity-info" *ngIf="vp.validation.similarity && vp.validation.similarity < 1">
+              <mat-icon>info</mat-icon>
+              <small>
+                Interpretado desde: "{{ vp.original.nombreProducto }}" 
+                ({{ (vp.validation.similarity * 100).toFixed(0) }}% coincidencia)
+              </small>
+            </div>
+          </div>
+
+          <div class="producto-actions">
+            <button 
+              class="btn-add-cart"
+              (click)="agregarAlCarrito(vp)"
+              [disabled]="vp.addedToCart"
+              [matTooltip]="vp.addedToCart ? 'Ya agregado al carrito' : 'Agregar al carrito'">
+              <mat-icon>{{ vp.addedToCart ? 'check' : 'add_shopping_cart' }}</mat-icon>
+              {{ vp.addedToCart ? 'Agregado' : 'Agregar' }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Producto NO encontrado - Mostrar sugerencias -->
+        <div class="producto-content not-found-content" *ngIf="!vp.validation.found">
+          <div class="not-found-header">
+            <mat-icon class="warning-icon">help_outline</mat-icon>
+            <div>
+              <h4>Producto no identificado</h4>
+              <p>Buscaste: <strong>"{{ vp.original.nombreProducto }}"</strong></p>
+              <p class="cantidad-info">Cantidad solicitada: {{ vp.original.cantidad }}</p>
+              <p class="notas" *ngIf="vp.original.notas">Nota: {{ vp.original.notas }}</p>
+            </div>
+          </div>
+
+          <div class="sugerencias" *ngIf="vp.validation.suggestions && vp.validation.suggestions.length > 0">
+            <p class="sugerencias-titulo">
+              <mat-icon>lightbulb</mat-icon>
+              ¿Te refieres a alguno de estos?
+            </p>
+            <div class="sugerencias-lista">
+              <div 
+                *ngFor="let sugerencia of vp.validation.suggestions" 
+                class="sugerencia-card"
+                (click)="usarSugerencia(vp, sugerencia)">
+                <img [src]="sugerencia.imageUrl" [alt]="sugerencia.name" class="sugerencia-image">
+                <div class="sugerencia-info">
+                  <strong>{{ sugerencia.name }}</strong>
+                  <span class="sugerencia-precio">{{ sugerencia.price }}</span>
+                </div>
+                <mat-icon>arrow_forward</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Acciones globales -->
+    <div class="acciones-globales">
+      <button 
+        class="btn-add-all"
+        (click)="agregarTodosAlCarrito()"
+        [disabled]="!hasValidProductsToAdd()">
+        <mat-icon>add_shopping_cart</mat-icon>
+        Agregar Todos los Válidos al Carrito
+      </button>
+      
+      <button 
+        class="btn-view-cart"
+        [routerLink]="['/cart']">
+        <mat-icon>shopping_cart</mat-icon>
+        Ver Carrito
+      </button>
+    </div>
+  </div>
+</div>
