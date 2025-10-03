@@ -22,7 +22,7 @@ export class PedidosGeminiService {
 
   // La API key ahora viene de las variables de entorno
   private readonly GEMINI_API_KEY = environment.geminiApiKey; 
-  private readonly GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+  private readonly GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
   private readonly USE_PROXY = environment.useProxy;
 
   constructor(private http: HttpClient) { }
