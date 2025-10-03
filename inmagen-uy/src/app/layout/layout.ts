@@ -37,6 +37,7 @@ export class LayoutComponent {
     { path: '/', icon: 'home', labelKey: 'nav.home' },
     { path: '/services', icon: 'business_center', labelKey: 'nav.services' },
     { path: '/products', icon: 'restaurant', labelKey: 'nav.products' },
+    { path: '/pedido-gemini', icon: 'smart_toy', labelKey: 'nav.quickOrder' },
     { path: '/catering', icon: 'event', labelKey: 'nav.catering' },
     { path: '/contact', icon: 'contact_mail', labelKey: 'nav.contact' },
     { path: '/careers', icon: 'work', labelKey: 'nav.careers' }
