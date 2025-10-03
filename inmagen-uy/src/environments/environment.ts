@@ -1,7 +1,7 @@
-// Archivo de producción - se sube a Git (sin API keys)
+// Archivo de producción - TEMPORAL: API key hasta implementar backend proxy
 export const environment = {
   production: true,
-  geminiApiKey: '', // NUNCA pongas la key real aquí - usa variables de entorno de Vercel
-  useProxy: true // En producción SIEMPRE usar backend proxy
+  geminiApiKey: 'AIzaSyAM6kC7cxv1RTZR_tnuxXh29XgB4hlsZxI', // TODO: Mover a backend proxy
+  useProxy: false // TODO: Cambiar a true cuando se implemente el proxy
 };
 
