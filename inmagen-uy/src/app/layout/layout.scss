@@ -128,6 +128,10 @@
   max-width: 1200px;
   margin: 0 auto;
   transition: all 0.3s ease;
+  
+  // Padding extra cuando el carrusel de promotores está activo
+  // Descomenta si activas el carrusel de promotores
+  padding-bottom: 112px; // 80px del carrusel + 32px de margen
 }
 
 // Ajustar posición del botón cuando el sidebar está abierto en modo 'side'
@@ -146,6 +150,8 @@
 
   .main-content {
     padding: 80px 16px 16px 16px;
+    // Padding extra cuando el carrusel de promotores está activo
+    padding-bottom: 76px; // 60px del carrusel + 16px de margen
   }
 
   // En móvil (modo 'over'), el botón siempre está en left: 16px

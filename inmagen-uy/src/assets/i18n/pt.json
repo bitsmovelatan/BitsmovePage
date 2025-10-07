@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "InMagen",
-    "subtitle": "Tradição e Sabor Judaico"
+    "title": "A Vivir & Comer",
+    "subtitle": "O melhor prazer da vida"
   },
   "nav": {
     "home": "Início",
@@ -18,11 +18,11 @@
     "next": "Próximo"
   },
   "home": {
-    "title": "Bem-vindos à InMagen",
+    "title": "Bem-vindos à A Vivir & Comer",
     "subtitle": "Descubra a autêntica cozinha judaica",
-    "description": "Na InMagen, temos orgulho em oferecer uma experiência culinária única com os nossos aperitivos judaicos. Cada receita é um tributo à tradição, elaborada com ingredientes frescos e o cuidado de mãos experientes. Desde a doçura de um Rugelach até o calor de um Challah recém-assado, convidamo-lo a explorar um mundo de sabores que enriquecerão os seus momentos mais especiais. Além disso, pensando em todas as necessidades, adaptámos uma seleção dos nossos clássicos para que também os desfrute na sua versão sem glúten.",
+    "description": "Na A Vivir & Comer, temos orgulho em oferecer uma experiência culinária única com os nossos aperitivos judaicos. Cada receita é um tributo à tradição, elaborada com ingredientes frescos e o cuidado de mãos experientes. Desde a doçura de um Rugelach até o calor de um Challah recém-assado, convidamo-lo a explorar um mundo de sabores que enriquecerão os seus momentos mais especiais. Além disso, pensando em todas as necessidades, adaptámos uma seleção dos nossos clássicos para que também os desfrute na sua versão sem glúten.",
     "features": {
-      "title": "Por que escolher InMagen?",
+      "title": "Por que escolher A Vivir & Comer?",
       "quality": {
         "title": "Qualidade Premium",
         "description": "Ingredientes frescos e receitas tradicionais transmitidas por gerações"
@@ -123,13 +123,22 @@
   },
   "products": {
     "title": "Nossos Produtos",
-    "subtitle": "Aperitivos judaicos tradicionais elaborados com paixão",
+    "subtitle": "Comida tradicional de diversas culturas elaborada com paixão",
     "glutenFreeCount": "produtos disponíveis sem glúten",
+    "regions": {
+      "all": "Todas as Regiões",
+      "jewish": "Comida Judaica",
+      "uruguayan": "Comida Uruguaia",
+      "venezuelan": "Comida Venezuelana",
+      "mexican": "Comida Mexicana",
+      "italian": "Comida Italiana"
+    },
     "categories": {
       "all": "Todos",
       "breads": "Pães",
       "pastries": "Confeitaria",
-      "sweets": "Doces"
+      "sweets": "Doces",
+      "main": "Pratos Principais"
     },
     "glutenFree": "Sem Glúten",
     "specialOffer": "Oferta Especial",
@@ -194,6 +203,96 @@
         "name": "Trigona de Alho-poró",
         "description": "Pastel triangular de massa filo recheado com alho-poró e queijo. Aperitivo salgado perfeito para qualquer ocasião.",
         "features": ["Triangular", "Recheio salgado", "Massa filo"]
+      },
+      "chivito": {
+        "name": "Chivito",
+        "description": "Sanduíche uruguaio com carne, presunto, queijo, ovo e vegetais. Um dos pratos mais emblemáticos do Uruguai.",
+        "features": ["Típico uruguaio", "Abundante", "Delicioso"]
+      },
+      "empanada_carne": {
+        "name": "Empanada de Carne",
+        "description": "Empanada criolla recheada com carne moída temperada. Perfeita para compartilhar ou como entrada.",
+        "features": ["Criolla", "Suculenta", "Tradicional"]
+      },
+      "alfajor": {
+        "name": "Alfajor",
+        "description": "Doce tradicional com dois biscoitos unidos por doce de leite e cobertos de chocolate.",
+        "features": ["Doce de leite", "Artesanal", "Típico"]
+      },
+      "torta_frita": {
+        "name": "Torta Frita",
+        "description": "Massa frita tradicional uruguaia, perfeita para dias chuvosos com chimarrão.",
+        "features": ["Tradicional", "Frita", "Caseira"]
+      },
+      "asado": {
+        "name": "Asado",
+        "description": "Carne grelhada estilo uruguaio. O prato mais emblemático da gastronomia rioplatense, cozido lentamente sobre brasas.",
+        "features": ["Na grelha", "Cortes premium", "Tradicional"]
+      },
+      "hallaca": {
+        "name": "Hallaca",
+        "description": "Tamal venezuelano recheado com carne de boi, porco, frango, azeitonas, passas e alcaparras. Prato natalino por excelência.",
+        "features": ["Natalina", "Recheio abundante", "Tradicional"]
+      },
+      "cachapa": {
+        "name": "Cachapa",
+        "description": "Panqueca de milho verde com queijo de mão. Doçura natural do milho com o toque salgado do queijo.",
+        "features": ["Milho fresco", "Com queijo", "Sem glúten"]
+      },
+      "arepa": {
+        "name": "Arepa",
+        "description": "Pão de milho venezuelano que pode ser recheado com diversos ingredientes. Versátil e deliciosa.",
+        "features": ["Milho", "Recheada", "Versátil"]
+      },
+      "tequeño": {
+        "name": "Tequeño",
+        "description": "Dedinhos de queijo branco envoltos em massa e fritos até ficarem dourados e crocantes.",
+        "features": ["Crocantes", "Com queijo", "Aperitivo"]
+      },
+      "taco": {
+        "name": "Taco",
+        "description": "Tortilha de milho com carne assada, coentro, cebola e molho. Ícone da comida mexicana.",
+        "features": ["Mexicano", "Tortilha de milho", "Autêntico"]
+      },
+      "burrito": {
+        "name": "Burrito",
+        "description": "Tortilha de farinha grande recheada com carne, feijão, arroz, queijo e vegetais.",
+        "features": ["Abundante", "Completo", "Nutritivo"]
+      },
+      "quesadilla": {
+        "name": "Quesadilla",
+        "description": "Tortilha de farinha com queijo derretido, pode incluir frango, carne ou vegetais.",
+        "features": ["Com queijo", "Quente", "Deliciosa"]
+      },
+      "churros": {
+        "name": "Churros",
+        "description": "Massa frita polvilhada com açúcar e canela. Perfeitos com chocolate quente.",
+        "features": ["Crocantes", "Açucarados", "Tradicionais"]
+      },
+      "pizza": {
+        "name": "Pizza Margherita",
+        "description": "Pizza clássica italiana com molho de tomate, mozzarella fresca e manjericão. Simples e deliciosa.",
+        "features": ["Clássica", "Mozzarella fresca", "Manjericão"]
+      },
+      "pasta_carbonara": {
+        "name": "Pasta Carbonara",
+        "description": "Massa com molho cremoso de ovo, queijo pecorino, pancetta e pimenta preta.",
+        "features": ["Cremosa", "Tradicional", "Italiana"]
+      },
+      "lasagna": {
+        "name": "Lasanha",
+        "description": "Camadas de massa com ragù de carne, molho bechamel e queijo gratinado.",
+        "features": ["Camadas", "Gratinada", "Abundante"]
+      },
+      "tiramisu": {
+        "name": "Tiramisu",
+        "description": "Sobremesa italiana com biscoitos embebidos em café, mascarpone e cacau.",
+        "features": ["Com café", "Mascarpone", "Suave"]
+      },
+      "cannoli": {
+        "name": "Cannoli",
+        "description": "Rolo crocante de massa frita recheado com ricota adoçada com lascas de chocolate.",
+        "features": ["Crocante", "Ricota doce", "Siciliano"]
       }
     },
     "info": {
@@ -281,7 +380,7 @@
         "sundayTime": "11:00 AM - 6:00 PM"
       }
     },
-    "whatsappMessage": "Olá! Gostaria de obter mais informações sobre os produtos da Inmagen",
+    "whatsappMessage": "Olá! Gostaria de obter mais informações sobre os produtos da A Vivir & Comer",
     "form": {
       "name": "Nome completo",
       "namePlaceholder": "João Silva",
@@ -362,7 +461,7 @@
       "position": "Posição de interesse",
       "availability": "Disponibilidade",
       "experience": "Experiência profissional relevante",
-      "motivation": "Motivação para se juntar à InMagen SAS",
+      "motivation": "Motivação para se juntar à A Vivir & Comer",
       "cv": "Anexar CV",
       "message": "Mensagem",
       "submit": "Enviar Candidatura",
@@ -371,7 +470,7 @@
     }
   },
   "footer": {
-    "rights": "© 2024 InMagen SAS Todos os direitos reservados.",
+    "rights": "© 2024 A Vivir & Comer. Todos os direitos reservados.",
     "social": "Siga-nos nas redes sociais"
   }
 }

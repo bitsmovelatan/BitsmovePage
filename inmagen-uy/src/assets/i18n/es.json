@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "InMagen",
-    "subtitle": "Tradición y Sabor Judío"
+    "title": "A Vivir & Comer",
+    "subtitle": "El mejor placer de la vida"
   },
   "nav": {
     "home": "Inicio",
@@ -18,11 +18,11 @@
     "next": "Siguiente"
   },
   "home": {
-    "title": "Bienvenidos a InMagen",
+    "title": "Bienvenidos a A Vivir & Comer",
     "subtitle": "Descubre la auténtica cocina judía",
-    "description": "En InMagen nos enorgullece ofrecer una experiencia culinaria única con nuestros aperitivos judíos. Cada receta es un tributo a la tradición, elaborada con ingredientes frescos y el cuidado de las manos expertas. Desde la dulzura de un Rugelach hasta la calidez de un Challah recién horneado, te invitamos a explorar un mundo de sabores que enriquecerán tus momentos más especiales. Además, pensando en todas las necesidades, hemos adaptado una selección de nuestros clásicos para que también los disfrutes en su versión sin gluten.",
+    "description": "En A Vivir & Comer nos enorgullece ofrecer una experiencia culinaria única con nuestros aperitivos judíos. Cada receta es un tributo a la tradición, elaborada con ingredientes frescos y el cuidado de las manos expertas. Desde la dulzura de un Rugelach hasta la calidez de un Challah recién horneado, te invitamos a explorar un mundo de sabores que enriquecerán tus momentos más especiales. Además, pensando en todas las necesidades, hemos adaptado una selección de nuestros clásicos para que también los disfrutes en su versión sin gluten.",
     "features": {
-      "title": "¿Por qué elegir InMagen?",
+      "title": "¿Por qué elegir A Vivir & Comer?",
       "quality": {
         "title": "Calidad Premium",
         "description": "Ingredientes frescos y recetas tradicionales transmitidas por generaciones"
@@ -66,13 +66,22 @@
   },
   "products": {
     "title": "Nuestros Productos",
-    "subtitle": "Aperitivos judíos tradicionales elaborados con pasión",
+    "subtitle": "Comida tradicional de diversas culturas elaborada con pasión",
     "glutenFreeCount": "productos disponibles sin gluten",
+    "regions": {
+      "all": "Todas las Regiones",
+      "jewish": "Comida Judía",
+      "uruguayan": "Comida Uruguaya",
+      "venezuelan": "Comida Venezolana",
+      "mexican": "Comida Mexicana",
+      "italian": "Comida Italiana"
+    },
     "categories": {
       "all": "Todos",
       "breads": "Panes",
       "pastries": "Pastelería",
-      "sweets": "Dulces"
+      "sweets": "Dulces",
+      "main": "Platos Principales"
     },
     "glutenFree": "Sin Gluten",
     "specialOffer": "Oferta Especial",
@@ -137,6 +146,96 @@
         "name": "Trigona de Puerro",
         "description": "Pastel triangular de masa filo relleno de puerro y queso. Aperitivo salado perfecto para cualquier ocasión.",
         "features": ["Triangular", "Relleno salado", "Masa filo"]
+      },
+      "chivito": {
+        "name": "Chivito",
+        "description": "Sándwich uruguayo con carne, jamón, queso, huevo y vegetales. Uno de los platos más emblemáticos de Uruguay.",
+        "features": ["Típico uruguayo", "Abundante", "Delicioso"]
+      },
+      "empanada_carne": {
+        "name": "Empanada de Carne",
+        "description": "Empanada criolla rellena de carne picada especiada. Perfecta para compartir o como entrada.",
+        "features": ["Criolla", "Jugosa", "Tradicional"]
+      },
+      "alfajor": {
+        "name": "Alfajor",
+        "description": "Dulce tradicional con dos galletas unidas por dulce de leche y cubiertas de chocolate.",
+        "features": ["Dulce de leche", "Artesanal", "Típico"]
+      },
+      "torta_frita": {
+        "name": "Torta Frita",
+        "description": "Masa frita tradicional uruguaya, perfecta para días de lluvia con mate.",
+        "features": ["Tradicional", "Frita", "Casera"]
+      },
+      "asado": {
+        "name": "Asado",
+        "description": "Carne a la parrilla estilo uruguayo. El plato más emblemático de la gastronomía rioplatense, cocinado lentamente sobre brasas.",
+        "features": ["A la parrilla", "Cortes premium", "Tradición"]
+      },
+      "hallaca": {
+        "name": "Hallaca",
+        "description": "Tamal venezolano relleno de carne de res, cerdo, pollo, aceitunas, pasas y alcaparras. Plato navideño por excelencia.",
+        "features": ["Navideña", "Relleno abundante", "Tradicional"]
+      },
+      "cachapa": {
+        "name": "Cachapa",
+        "description": "Panqueca de maíz tierno con queso de mano. Dulce natural del maíz con el toque salado del queso.",
+        "features": ["Maíz fresco", "Con queso", "Sin gluten"]
+      },
+      "arepa": {
+        "name": "Arepa",
+        "description": "Pan de maíz venezolano que se puede rellenar con diversos ingredientes. Versátil y deliciosa.",
+        "features": ["Maíz", "Rellena", "Versátil"]
+      },
+      "tequeño": {
+        "name": "Tequeño",
+        "description": "Deditos de queso blanco envueltos en masa y fritos hasta quedar dorados y crujientes.",
+        "features": ["Crujientes", "Con queso", "Aperitivo"]
+      },
+      "taco": {
+        "name": "Taco",
+        "description": "Tortilla de maíz con carne asada, cilantro, cebolla y salsa. Icono de la comida mexicana.",
+        "features": ["Mexicano", "Tortilla de maíz", "Auténtico"]
+      },
+      "burrito": {
+        "name": "Burrito",
+        "description": "Tortilla de harina grande rellena de carne, frijoles, arroz, queso y vegetales.",
+        "features": ["Abundante", "Completo", "Nutritivo"]
+      },
+      "quesadilla": {
+        "name": "Quesadilla",
+        "description": "Tortilla de harina con queso derretido, puede incluir pollo, carne o vegetales.",
+        "features": ["Con queso", "Caliente", "Deliciosa"]
+      },
+      "churros": {
+        "name": "Churros",
+        "description": "Masa frita espolvoreada con azúcar y canela. Perfectos con chocolate caliente.",
+        "features": ["Crujientes", "Azucarados", "Tradicionales"]
+      },
+      "pizza": {
+        "name": "Pizza Margherita",
+        "description": "Pizza clásica italiana con salsa de tomate, mozzarella fresca y albahaca. Sencilla y deliciosa.",
+        "features": ["Clásica", "Mozzarella fresca", "Albahaca"]
+      },
+      "pasta_carbonara": {
+        "name": "Pasta Carbonara",
+        "description": "Pasta con salsa cremosa de huevo, queso pecorino, panceta y pimienta negra.",
+        "features": ["Cremosa", "Tradicional", "Italiana"]
+      },
+      "lasagna": {
+        "name": "Lasaña",
+        "description": "Capas de pasta con ragú de carne, salsa bechamel y queso gratinado.",
+        "features": ["Capas", "Gratinada", "Abundante"]
+      },
+      "tiramisu": {
+        "name": "Tiramisú",
+        "description": "Postre italiano con bizcochos embebidos en café, mascarpone y cacao.",
+        "features": ["Con café", "Mascarpone", "Suave"]
+      },
+      "cannoli": {
+        "name": "Cannoli",
+        "description": "Rollo crujiente de masa frita relleno de ricotta endulzada con chips de chocolate.",
+        "features": ["Crujiente", "Ricotta dulce", "Siciliano"]
       }
     },
     "info": {
@@ -265,7 +364,7 @@
         "sundayTime": "11:00 AM - 6:00 PM"
       }
     },
-    "whatsappMessage": "Hola! Me gustaría obtener más información sobre los productos de Inmagen",
+    "whatsappMessage": "Hola! Me gustaría obtener más información sobre los productos de A Vivir & Comer",
     "form": {
       "name": "Nombre completo",
       "namePlaceholder": "Juan Pérez",
@@ -346,7 +445,7 @@
       "position": "Posición de interés",
       "availability": "Disponibilidad",
       "experience": "Experiencia laboral relevante",
-      "motivation": "Motivación para unirte a Inmagen.uy",
+      "motivation": "Motivación para unirte a A Vivir & Comer",
       "cv": "Adjuntar CV",
       "message": "Mensaje",
       "submit": "Enviar Postulación",
@@ -355,7 +454,7 @@
     }
   },
   "footer": {
-    "rights": "© 2024 Inmagen.uy. Todos los derechos reservados.",
+    "rights": "© 2024 A Vivir & Comer. Todos los derechos reservados.",
     "social": "Síguenos en redes sociales"
   }
 }

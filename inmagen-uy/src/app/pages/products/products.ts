@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,17 +8,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { TranslationService } from '../../services/translation';
 import { CartService } from '../../services/cart';
+import { CatalogService, CatalogProduct } from '../../services/catalog.service';
 import { PageNavigation } from '../../shared/page-navigation/page-navigation';
-
-interface Product {
-  name: string;
-  description: string;
-  glutenFree: boolean;
-  imageUrl: string;
-  category: string;
-  price?: string;
-  features?: string[];
-}
 
 @Component({
   selector: 'app-products',
@@ -35,101 +26,38 @@ interface Product {
   templateUrl: './products.html',
   styleUrl: './products.scss'
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
   selectedCategory: string = 'all';
-  
-  productKeys = [
-    {
-      key: 'brownie',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=800&q=80',
-      category: 'sweets',
-      price: '$990'
-    },
-    {
-      key: 'cookies',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80',
-      category: 'sweets',
-      price: '$40'
-    },
-    {
-      key: 'knish',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1568471173248-eb9aba2f5e77?w=800&q=80',
-      category: 'pastries',
-      price: '$42'
-    },
-    {
-      key: 'masita',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800&q=80',
-      category: 'sweets',
-      price: '$990'
-    },
-    {
-      key: 'pionono',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
-      category: 'pastries',
-      price: '$990'
-    },
-    {
-      key: 'pletzalaj',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80',
-      category: 'breads',
-      price: '$25'
-    },
-    {
-      key: 'pletzalaj_rellena',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80',
-      category: 'breads',
-      price: '$65'
-    },
-    {
-      key: 'rol_canela',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=80',
-      category: 'pastries',
-      price: '$100'
-    },
-    {
-      key: 'strudel',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1587241321921-91a834d6d191?w=800&q=80',
-      category: 'pastries',
-      price: '$650'
-    },
-    {
-      key: 'tarta_manzana',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=800&q=80',
-      category: 'pastries',
-      price: '$650'
-    },
-    {
-      key: 'trigona_puerro',
-      glutenFree: false,
-      imageUrl: 'https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=800&q=80',
-      category: 'pastries',
-      price: '$42'
-    }
-  ];
+  selectedRegion: string = 'all';
+  allProducts: CatalogProduct[] = [];
 
   categories = [
     { id: 'all', labelKey: 'products.categories.all', icon: 'apps' },
     { id: 'breads', labelKey: 'products.categories.breads', icon: 'bakery_dining' },
     { id: 'pastries', labelKey: 'products.categories.pastries', icon: 'cake' },
-    { id: 'sweets', labelKey: 'products.categories.sweets', icon: 'cookie' }
+    { id: 'sweets', labelKey: 'products.categories.sweets', icon: 'cookie' },
+    { id: 'main', labelKey: 'products.categories.main', icon: 'restaurant' }
+  ];
+
+  regions = [
+    { id: 'all', labelKey: 'products.regions.all', icon: 'public', flag: '🌍' },
+    { id: 'jewish', labelKey: 'products.regions.jewish', icon: 'star', flag: '✡️' },
+    { id: 'uruguayan', labelKey: 'products.regions.uruguayan', icon: 'flag', flag: '🇺🇾' },
+    { id: 'venezuelan', labelKey: 'products.regions.venezuelan', icon: 'flag', flag: '🇻🇪' },
+    { id: 'mexican', labelKey: 'products.regions.mexican', icon: 'flag', flag: '🇲🇽' },
+    { id: 'italian', labelKey: 'products.regions.italian', icon: 'flag', flag: '🇮🇹' }
   ];
 
   constructor(
     public translate: TranslationService,
     private cartService: CartService,
+    private catalogService: CatalogService,
     private snackBar: MatSnackBar
   ) {}
+
+  ngOnInit(): void {
+    this.allProducts = this.catalogService.getAllProducts();
+  }
 
   t(key: string): string {
     return this.translate.get(key);
@@ -139,15 +67,28 @@ export class ProductsComponent {
     this.selectedCategory = category;
   }
 
-  getFilteredProducts(): any[] {
-    if (this.selectedCategory === 'all') {
-      return this.productKeys;
+  filterByRegion(region: string): void {
+    this.selectedRegion = region;
+  }
+
+  getFilteredProducts(): CatalogProduct[] {
+    let filtered = this.allProducts;
+
+    // Filtrar por región
+    if (this.selectedRegion !== 'all') {
+      filtered = filtered.filter(p => p.region === this.selectedRegion);
     }
-    return this.productKeys.filter(p => p.category === this.selectedCategory);
+
+    // Filtrar por categoría
+    if (this.selectedCategory !== 'all') {
+      filtered = filtered.filter(p => p.category === this.selectedCategory);
+    }
+
+    return filtered;
   }
 
   getGlutenFreeCount(): number {
-    return this.productKeys.filter(p => p.glutenFree).length;
+    return this.getFilteredProducts().filter(p => p.glutenFree).length;
   }
 
   getProductName(key: string): string {
@@ -167,12 +108,16 @@ export class ProductsComponent {
     return this.translate.get(labelKey);
   }
 
-  addToCart(productKey: any): void {
+  getRegionName(labelKey: string): string {
+    return this.translate.get(labelKey);
+  }
+
+  addToCart(product: CatalogProduct): void {
     const productData = {
-      name: this.getProductName(productKey.key),
-      price: productKey.price,
-      imageUrl: productKey.imageUrl,
-      glutenFree: productKey.glutenFree
+      name: this.getProductName(product.key),
+      price: product.price,
+      imageUrl: product.imageUrl,
+      glutenFree: product.glutenFree
     };
     
     console.log('Agregando al carrito:', productData);

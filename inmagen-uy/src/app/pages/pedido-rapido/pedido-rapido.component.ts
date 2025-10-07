@@ -214,4 +214,15 @@ export class PedidoRapidoComponent {
   hasValidProductsToAdd(): boolean {
     return this.productosValidados.some(p => p.validation.found && !p.addedToCart);
   }
+
+  getRegionDisplay(region: string): string {
+    const regionMap: Record<string, string> = {
+      'jewish': '🕎 Judía',
+      'uruguayan': '🇺🇾 Uruguaya',
+      'venezuelan': '🇻🇪 Venezolana',
+      'mexican': '🇲🇽 Mexicana',
+      'italian': '🇮🇹 Italiana'
+    };
+    return regionMap[region] || region;
+  }
 }

@@ -2,6 +2,13 @@
   <div class="page-header">
     <h2>🤖 Asistente Rápido de Pedidos con IA</h2>
     <p>Escribe tu pedido con tus propias palabras y déjanos procesar lo que necesitas</p>
+    <p class="subtitle-regions">
+      <span>🕎 Comida Judía</span>
+      <span>🇺🇾 Comida Uruguaya</span>
+      <span>🇻🇪 Comida Venezolana</span>
+      <span>🇲🇽 Comida Mexicana</span>
+      <span>🇮🇹 Comida Italiana</span>
+    </p>
   </div>
   
   <!-- Formulario de entrada -->
@@ -9,7 +16,7 @@
     <textarea 
       [(ngModel)]="textoUsuario" 
       rows="5" 
-      placeholder="Ejemplo: 'quiero dos knishes, un brownie y tres galletas'"
+      placeholder="Ejemplo: 'Quiero 2 hallacas venezolanas, 3 cachapas, un asado uruguayo, 4 tacos mexicanos y una pizza italiana'"
       [disabled]="cargando"
       class="pedido-textarea"
     ></textarea>
@@ -71,6 +78,10 @@
               <span class="cantidad-badge">
                 <mat-icon>shopping_basket</mat-icon>
                 Cantidad: {{ vp.original.cantidad }}
+              </span>
+              <span class="region-badge" [attr.data-region]="vp.validation.product.region">
+                <mat-icon>public</mat-icon>
+                {{ getRegionDisplay(vp.validation.product.region) }}
               </span>
               <span class="categoria-badge">{{ vp.validation.product.category }}</span>
               <span *ngIf="vp.validation.product.glutenFree" class="gluten-free-badge">

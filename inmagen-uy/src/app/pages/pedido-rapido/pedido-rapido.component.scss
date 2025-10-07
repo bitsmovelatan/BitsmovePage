@@ -21,6 +21,31 @@
       max-width: 600px;
       margin: 0 auto;
     }
+
+    .subtitle-regions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+      font-size: 14px;
+      
+      span {
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        border-radius: 20px;
+        color: #374151;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: linear-gradient(135deg, #6B46C1 0%, #9333EA 100%);
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);
+        }
+      }
+    }
   }
 }
 
@@ -327,7 +352,7 @@
       gap: 8px;
       margin-bottom: 12px;
       
-      .cantidad-badge, .categoria-badge, .gluten-free-badge {
+      .cantidad-badge, .region-badge, .categoria-badge, .gluten-free-badge {
         display: inline-flex;
         align-items: center;
         gap: 4px;
@@ -345,6 +370,43 @@
           font-size: 16px;
           width: 16px;
           height: 16px;
+        }
+      }
+
+      .region-badge {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        color: #92400e;
+        
+        mat-icon {
+          font-size: 16px;
+          width: 16px;
+          height: 16px;
+        }
+
+        // Colores específicos por región
+        &[data-region="jewish"] {
+          background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+          color: #3730a3;
+        }
+
+        &[data-region="uruguayan"] {
+          background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+          color: #1e40af;
+        }
+
+        &[data-region="venezuelan"] {
+          background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+          color: #92400e;
+        }
+
+        &[data-region="mexican"] {
+          background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+          color: #991b1b;
+        }
+
+        &[data-region="italian"] {
+          background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+          color: #065f46;
         }
       }
       

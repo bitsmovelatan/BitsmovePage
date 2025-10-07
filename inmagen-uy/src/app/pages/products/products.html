@@ -9,8 +9,32 @@
     </div>
   </div>
 
+  <!-- Region Filter -->
+  <section class="region-filter">
+    <h3 class="filter-title">
+      <mat-icon>public</mat-icon>
+      Regiones Culturales
+    </h3>
+    <div class="filter-chips">
+      @for (region of regions; track region.id) {
+        <button 
+          mat-raised-button 
+          [class.active]="selectedRegion === region.id"
+          (click)="filterByRegion(region.id)"
+          class="filter-chip region-chip">
+          <span class="flag-icon">{{ region.flag }}</span>
+          {{ getRegionName(region.labelKey) }}
+        </button>
+      }
+    </div>
+  </section>
+
   <!-- Category Filter -->
   <section class="category-filter">
+    <h3 class="filter-title">
+      <mat-icon>category</mat-icon>
+      Categorías
+    </h3>
     <div class="filter-chips">
       @for (category of categories; track category.id) {
         <button 

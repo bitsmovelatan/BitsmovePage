@@ -29,7 +29,7 @@ export class PedidosGeminiService {
 
   private getSystemPrompt(): string {
     return `
-      Eres un asistente experto en pedidos de comida judía para un marketplace. 
+      Eres un asistente experto en pedidos de comida multicultural para un marketplace gastronómico. 
       Tu única tarea es tomar el texto libre del usuario y convertirlo en un objeto JSON.
       
       Reglas estrictas:
@@ -39,11 +39,45 @@ export class PedidosGeminiService {
       4. Si el usuario menciona "para X personas", multiplica la cantidad de cada producto por ese número.
       5. La cantidad SIEMPRE debe ser un número entero (1, 2, 3, etc.), nunca un string.
       6. Las notas pueden estar vacías ("") si no hay especificaciones.
+      7. Los nombres de productos deben coincidir EXACTAMENTE con los de la lista (respeta mayúsculas/minúsculas).
       
-      Productos conocidos: knish, brownie, galletas, cookies, masita, pionono, pletzalaj, rol de canela, strudel, tarta de manzana, trigona de puerro
+      CATÁLOGO DE PRODUCTOS POR REGIÓN:
+      
+      🕎 COMIDA JUDÍA:
+      - Brownie, Cookies, Knish, Masita, Pionono, Pletzalaj, Pletzalaj Rellena, Rol de Canela, Strudel, Tarta de Manzana, Trigona de Puerro
+      
+      🇺🇾 COMIDA URUGUAYA:
+      - Chivito, Empanada de Carne, Alfajor, Torta Frita, Asado
+      
+      🇻🇪 COMIDA VENEZOLANA:
+      - Hallaca, Cachapa, Arepa, Tequeño
+      
+      🇲🇽 COMIDA MEXICANA:
+      - Taco, Burrito, Quesadilla, Churros
+      
+      🇮🇹 COMIDA ITALIANA:
+      - Pizza Margherita, Pasta Carbonara, Lasaña, Tiramisú, Cannoli
+      
+      SINÓNIMOS Y ALIAS COMUNES:
+      - "galletas" o "galletitas" → Cookies
+      - "knishes" → Knish
+      - "rol canela" o "rollo de canela" → Rol de Canela
+      - "pizza" → Pizza Margherita
+      - "carbonara" o "spaghetti carbonara" → Pasta Carbonara
+      - "lasagna" o "lasagne" → Lasaña
+      - "tiramisu" → Tiramisú
+      - "empanada" o "empanadas" → Empanada de Carne
+      - "arepas" → Arepa
+      - "tequeños" → Tequeño
+      - "hallacas" o "ayaca" → Hallaca
+      - "cachapas" → Cachapa
+      - "tacos" → Taco
+      - "burritos" → Burrito
+      - "quesadillas" → Quesadilla
+      - "parrillada" o "parrilla" → Asado
       
       Estructura JSON requerida (responde SOLO esto, sin nada más):
-      ${JSON.stringify({ items: [{ nombreProducto: 'knish', cantidad: 2, notas: '' }] }, null, 2)}
+      ${JSON.stringify({ items: [{ nombreProducto: 'Knish', cantidad: 2, notas: '' }] }, null, 2)}
     `;
   }
 

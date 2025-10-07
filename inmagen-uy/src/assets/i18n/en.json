@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "InMagen",
-    "subtitle": "Jewish Tradition and Flavor"
+    "title": "A Vivir & Comer",
+    "subtitle": "The best pleasure of life"
   },
   "nav": {
     "home": "Home",
@@ -18,17 +18,17 @@
     "next": "Next"
   },
   "home": {
-    "title": "Welcome to InMagen",
+    "title": "Welcome to A Vivir y Comer",
     "subtitle": "Discover authentic Jewish cuisine",
-    "description": "At InMagen, we are proud to offer a unique culinary experience with our Jewish appetizers. Each recipe is a tribute to tradition, crafted with fresh ingredients and the care of expert hands. From the sweetness of a Rugelach to the warmth of a freshly baked Challah, we invite you to explore a world of flavors that will enrich your most special moments. Furthermore, with all needs in mind, we have adapted a selection of our classics so you can also enjoy them in their gluten-free version.",
+    "description": "At A Vivir & Comer, we are proud to offer a unique culinary experience with our Jewish appetizers. Each recipe is a tribute to tradition, crafted with fresh ingredients and the care of expert hands. From the sweetness of a Rugelach to the warmth of a freshly baked Challah, we invite you to explore a world of flavors that will enrich your most special moments. Furthermore, with all needs in mind, we have adapted a selection of our classics so you can also enjoy them in their gluten-free version.",
     "features": {
-      "title": "Why choose InMagen?",
+      "title": "Why choose A Vivir & Comer?",
       "quality": {
         "title": "Premium Quality",
         "description": "Fresh ingredients and traditional recipes passed down through generations"
       },
       "tradition": {
-        "title": "Authentic Tradition",
+        "title": "Authentic Tradition", 
         "description": "We respect kosher techniques and ancestral customs"
       },
       "variety": {
@@ -107,13 +107,22 @@
   },
   "products": {
     "title": "Our Products",
-    "subtitle": "Traditional Jewish appetizers made with passion",
+    "subtitle": "Traditional food from diverse cultures made with passion",
     "glutenFreeCount": "gluten-free products available",
+    "regions": {
+      "all": "All Regions",
+      "jewish": "Jewish Food",
+      "uruguayan": "Uruguayan Food",
+      "venezuelan": "Venezuelan Food",
+      "mexican": "Mexican Food",
+      "italian": "Italian Food"
+    },
     "categories": {
       "all": "All",
       "breads": "Breads",
       "pastries": "Pastries",
-      "sweets": "Sweets"
+      "sweets": "Sweets",
+      "main": "Main Dishes"
     },
     "glutenFree": "Gluten Free",
     "specialOffer": "Special Offer",
@@ -178,6 +187,96 @@
         "name": "Leek Trigona",
         "description": "Triangular phyllo pastry filled with leek and cheese. Perfect savory appetizer for any occasion.",
         "features": ["Triangular", "Savory filling", "Phyllo dough"]
+      },
+      "chivito": {
+        "name": "Chivito",
+        "description": "Uruguayan sandwich with beef, ham, cheese, egg and vegetables. One of Uruguay's most emblematic dishes.",
+        "features": ["Typical Uruguayan", "Abundant", "Delicious"]
+      },
+      "empanada_carne": {
+        "name": "Beef Empanada",
+        "description": "Criolla empanada filled with spiced ground beef. Perfect for sharing or as a starter.",
+        "features": ["Criolla", "Juicy", "Traditional"]
+      },
+      "alfajor": {
+        "name": "Alfajor",
+        "description": "Traditional sweet with two cookies joined by dulce de leche and covered in chocolate.",
+        "features": ["Dulce de leche", "Artisanal", "Typical"]
+      },
+      "torta_frita": {
+        "name": "Torta Frita",
+        "description": "Traditional Uruguayan fried dough, perfect for rainy days with mate.",
+        "features": ["Traditional", "Fried", "Homemade"]
+      },
+      "asado": {
+        "name": "Asado",
+        "description": "Uruguayan-style grilled meat. The most emblematic dish of River Plate gastronomy, slowly cooked over embers.",
+        "features": ["Grilled", "Premium cuts", "Traditional"]
+      },
+      "hallaca": {
+        "name": "Hallaca",
+        "description": "Venezuelan tamale filled with beef, pork, chicken, olives, raisins and capers. Christmas dish par excellence.",
+        "features": ["Christmas", "Abundant filling", "Traditional"]
+      },
+      "cachapa": {
+        "name": "Cachapa",
+        "description": "Fresh corn pancake with hand cheese. Natural sweetness of corn with the salty touch of cheese.",
+        "features": ["Fresh corn", "With cheese", "Gluten-free"]
+      },
+      "arepa": {
+        "name": "Arepa",
+        "description": "Venezuelan corn bread that can be filled with various ingredients. Versatile and delicious.",
+        "features": ["Corn", "Filled", "Versatile"]
+      },
+      "tequeño": {
+        "name": "Tequeño",
+        "description": "White cheese fingers wrapped in dough and fried until golden and crispy.",
+        "features": ["Crispy", "With cheese", "Appetizer"]
+      },
+      "taco": {
+        "name": "Taco",
+        "description": "Corn tortilla with grilled meat, cilantro, onion and salsa. Icon of Mexican food.",
+        "features": ["Mexican", "Corn tortilla", "Authentic"]
+      },
+      "burrito": {
+        "name": "Burrito",
+        "description": "Large flour tortilla filled with meat, beans, rice, cheese and vegetables.",
+        "features": ["Abundant", "Complete", "Nutritious"]
+      },
+      "quesadilla": {
+        "name": "Quesadilla",
+        "description": "Flour tortilla with melted cheese, can include chicken, beef or vegetables.",
+        "features": ["With cheese", "Hot", "Delicious"]
+      },
+      "churros": {
+        "name": "Churros",
+        "description": "Fried dough sprinkled with sugar and cinnamon. Perfect with hot chocolate.",
+        "features": ["Crispy", "Sugary", "Traditional"]
+      },
+      "pizza": {
+        "name": "Pizza Margherita",
+        "description": "Classic Italian pizza with tomato sauce, fresh mozzarella and basil. Simple and delicious.",
+        "features": ["Classic", "Fresh mozzarella", "Basil"]
+      },
+      "pasta_carbonara": {
+        "name": "Pasta Carbonara",
+        "description": "Pasta with creamy sauce of egg, pecorino cheese, pancetta and black pepper.",
+        "features": ["Creamy", "Traditional", "Italian"]
+      },
+      "lasagna": {
+        "name": "Lasagna",
+        "description": "Layers of pasta with meat ragù, bechamel sauce and gratinated cheese.",
+        "features": ["Layered", "Gratinated", "Abundant"]
+      },
+      "tiramisu": {
+        "name": "Tiramisu",
+        "description": "Italian dessert with coffee-soaked ladyfingers, mascarpone and cocoa.",
+        "features": ["With coffee", "Mascarpone", "Smooth"]
+      },
+      "cannoli": {
+        "name": "Cannoli",
+        "description": "Crispy fried dough roll filled with sweetened ricotta with chocolate chips.",
+        "features": ["Crispy", "Sweet ricotta", "Sicilian"]
       }
     },
     "info": {
@@ -265,7 +364,7 @@
         "sundayTime": "11:00 AM - 6:00 PM"
       }
     },
-    "whatsappMessage": "Hello! I would like to get more information about InMagen products",
+    "whatsappMessage": "Hello! I would like to get more information about A Vivir & Comer products",
     "form": {
       "name": "Full name",
       "namePlaceholder": "John Doe",
@@ -346,7 +445,7 @@
       "position": "Position of interest",
       "availability": "Availability",
       "experience": "Relevant work experience",
-      "motivation": "Motivation to join InMagen SAS",
+      "motivation": "Motivation to join A Vivir & Comer SAS",
       "cv": "Attach CV",
       "message": "Message",
       "submit": "Submit Application",
@@ -355,7 +454,7 @@
     }
   },
   "footer": {
-    "rights": "© 2024 InMagen SAS All rights reserved.",
+    "rights": "© 2024 A Vivir & Comer SAS All rights reserved.",
     "social": "Follow us on social media"
   }
 }

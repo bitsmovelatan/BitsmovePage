@@ -1,0 +1,15 @@
+<div class="sponsors-carousel-container">
+  <div class="sponsors-carousel">
+    <div class="carousel-track">
+      @for (sponsor of infiniteSponsors; track $index) {
+        <div class="sponsor-item">
+          <img [src]="sponsor.logo" [alt]="sponsor.name" />
+        </div>
+      }
+    </div>
+  </div>
+  <div class="carousel-gradient-left"></div>
+  <div class="carousel-gradient-right"></div>
+</div>
+
+

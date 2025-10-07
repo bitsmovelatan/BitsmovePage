@@ -10,6 +10,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { TranslationService } from '../services/translation';
 import { CartService } from '../services/cart';
+// CARRUSEL DE PROMOTORES - Componente de prueba
+import { SponsorsCarouselComponent } from '../shared/sponsors-carousel/sponsors-carousel';
 
 @Component({
   selector: 'app-layout',
@@ -24,7 +26,8 @@ import { CartService } from '../services/cart';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    SponsorsCarouselComponent // Componente del carrusel de promotores
   ]
 })
 export class LayoutComponent {
