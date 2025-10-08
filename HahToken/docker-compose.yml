@@ -1,0 +1,82 @@
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7
+    container_name: fertilitytoken-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: adminpassword
+      MONGO_INITDB_DATABASE: fertilitytoken
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - fertilitytoken-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fertilitytoken-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      MONGODB_URI: mongodb://admin:adminpassword@mongodb:27017/fertilitytoken?authSource=admin
+      NODE_ENV: production
+    ports:
+      - "5001:5000"
+    depends_on:
+      - mongodb
+    networks:
+      - fertilitytoken-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Frontend Web (Angular)
+  frontend:
+    build:
+      context: ./frontend-web
+      dockerfile: Dockerfile
+    container_name: fertilitytoken-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - fertilitytoken-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Mobile App (Expo Web Build)
+  mobile-web:
+    build:
+      context: ./mobile-app
+      dockerfile: Dockerfile
+    container_name: fertilitytoken-mobile-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - fertilitytoken-network
+
+networks:
+  fertilitytoken-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+    driver: local
+
