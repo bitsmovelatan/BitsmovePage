@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HahToken",
-    "slug": "hahtoken-mobile",
+    "name": "FertilityToken",
+    "slug": "fertilitytoken-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

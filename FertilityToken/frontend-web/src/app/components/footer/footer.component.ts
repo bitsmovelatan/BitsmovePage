@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
     <footer class="footer">
       <div class="container footer-content">
         <div class="footer-section">
-          <h3>😄 HahToken</h3>
+          <h3>🌸 FertilityToken</h3>
           <p>Your innovative digital token platform</p>
         </div>
         
@@ -30,7 +30,7 @@ import { RouterModule } from '@angular/router';
         
         <div class="footer-section">
           <h4>Contact</h4>
-          <p>support&#64;hahtoken.com</p>
+          <p>support&#64;fertilitytoken.com</p>
           <div class="social-links">
             <a href="#" aria-label="Twitter">🐦</a>
             <a href="#" aria-label="Discord">💬</a>

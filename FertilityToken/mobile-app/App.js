@@ -36,7 +36,7 @@ export default function App() {
             <Stack.Screen 
               name="Home" 
               component={HomeScreen}
-              options={{ title: 'HahToken' }}
+              options={{ title: 'FertilityToken' }}
             />
             <Stack.Screen 
               name="Login" 

@@ -6,10 +6,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
 /**
- * @title HahToken
- * @dev ERC20 Token for the Hah platform
+ * @title FertilityToken
+ * @dev ERC20 Token for the Fertility platform
  */
-contract HahToken is ERC20, Ownable, Pausable {
+contract FertilityToken is ERC20, Ownable, Pausable {
     
     // Token details
     uint256 public constant INITIAL_SUPPLY = 1000000 * 10**18; // 1 million tokens
@@ -22,7 +22,7 @@ contract HahToken is ERC20, Ownable, Pausable {
     event TokensClaimed(address indexed recipient, uint256 amount);
     event TokensMinted(address indexed to, uint256 amount);
     
-    constructor() ERC20("HahToken", "HAH") Ownable(msg.sender) {
+    constructor() ERC20("FertilityToken", "FERT") Ownable(msg.sender) {
         _mint(msg.sender, INITIAL_SUPPLY);
     }
     

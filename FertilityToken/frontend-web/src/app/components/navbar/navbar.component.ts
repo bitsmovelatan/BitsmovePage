@@ -13,8 +13,8 @@ import { LanguageService } from '../../services/language.service';
     <nav class="navbar">
       <div class="container navbar-content">
         <a routerLink="/" class="logo">
-          <span class="logo-icon">😄</span>
-          <span class="logo-text">HahToken</span>
+          <span class="logo-icon">🌸</span>
+          <span class="logo-text">FertilityToken</span>
         </a>
         
         <div class="nav-links">

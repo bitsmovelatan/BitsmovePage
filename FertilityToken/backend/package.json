@@ -1,7 +1,7 @@
 {
-  "name": "hahtoken-backend",
+  "name": "fertilitytoken-backend",
   "version": "1.0.0",
-  "description": "Backend API for HahToken platform",
+  "description": "Backend API for FertilityToken platform",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

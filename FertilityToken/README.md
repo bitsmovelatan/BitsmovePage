@@ -1,12 +1,12 @@
-# 😄 HahToken Platform
+# 🌸 FertilityToken Platform
 
 A comprehensive blockchain-based token platform with community engagement, storytelling, and tokenized incentives.
 
 ## 📋 Overview
 
-HahToken combines modern web technologies with blockchain to create an engaging ecosystem where users can:
+FertilityToken combines modern web technologies with blockchain to create an engaging ecosystem where users can:
 - 📖 Share and read community stories
-- 🪙 Receive HAH tokens for participation
+- 🪙 Receive FERT tokens for participation
 - 🌍 Connect with others globally in multiple languages
 - 🔒 Benefit from transparent, secure blockchain transactions
 
@@ -40,7 +40,7 @@ The platform consists of four main components:
 ### Core Features
 - 🔐 **JWT Authentication** - Secure user authentication
 - 📖 **Story Platform** - Share and read community stories
-- 🪙 **Token Claiming** - One-time claim of 1000 FERT tokens
+- 🪙 **Token Claiming** - One-time claim of 1,000 FERT tokens
 - 🌐 **Multi-language** - English and Spanish support
 - 📱 **Cross-platform** - Web, iOS, and Android
 - 💼 **User Dashboard** - Track tokens and manage profile
